@@ -1,0 +1,140 @@
+
+.center_agent{
+margin-top:80px; 
+padding-top:50px;
+padding-bottom:50px; 
+ }
+#list_detail{
+padding-top:50px;
+padding-bottom:50px; 
+background:#03a9f414;
+ }
+.center_agent_1r h5 i{
+margin-right:5px;
+vertical-align:middle; 
+ }
+.center_agent_1r  .social-network  a{
+background: rgba(2, 28, 82, 1); 
+}
+.list_detail_1l2{
+background:#fff;
+padding:30px 15px;
+ }
+.list_detail_1l2i{
+margin-top:20px; 
+ }
+.list_detail_1l4{
+margin-top:30px; 
+ }
+.list_detail_1l4r{
+background:#fff;
+padding:30px 15px; 
+min-height:228px;
+ }
+.list_detail_1l4r h6 i{
+margin-right:5px;
+ }
+.list_detail_1l4r ul li{
+display:inline-block;
+margin-right:30px;
+ }
+.list_detail_1l4r h5 .button_1{
+padding:6px 12px 8px 12px;
+ }
+.list_detail_1l4r h5{
+border-top:1px solid #eee;
+padding-top:15px;
+ }
+ 
+.agent_h_1i .span_1{
+display:block;
+ }
+.agent_h_1i .span_1 i{
+font-size:26px;
+ }
+.agent_h_1i{
+background:#fff;
+padding:30px 15px;
+border-radius:10px; 
+ }
+.agent_h_1i .bg_1{
+background:#03a9f414;
+padding:10px;
+ }
+.agent_h_1i h6{
+margin-top:5px!important;
+margin-bottom:5px;
+ }
+.list_detail_1lp{
+margin-top:30px; 
+ }
+/*********************agent_end****************/
+
+
+
+@media screen and (max-width : 767px){
+.center_agent{
+margin-top:0; 
+ }
+.center_agent_1r {
+margin-top:15px;
+text-align:center; 
+ }
+.list_detail_1l2 {
+text-align:center; 
+ }
+.list_detail_1l2i .col-sm-3{
+margin-top:15px; 
+ }
+.list_detail_1l4r  {
+text-align:center; 
+ }
+.list_detail_1l4r h5 {
+text-align:left; 
+ }
+.list_detail_1r1 img{
+margin-right:5px; 
+ }
+.list_detail_1r {
+margin-top:20px; 
+ }
+.list_detail_1r2 {
+text-align:center;  
+ }
+.popular_2i3 {
+text-align:center; 
+ }
+.agent_h_1i {
+margin-top:10px; 
+ }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+.list_detail_1l2i h6{
+ font-size:14px;
+ }
+.popular_2i1 img{
+min-height:228px; 
+ }
+.list_detail_1l4r ul li{
+ margin-right:5px;
+ }
+.agent_h_1i .bg_1{
+font-size:16px; 
+ }
+.center_agent{
+margin-top:72px; 
+ }
+ }
+@media (min-width:992px) and (max-width:1200px) {
+.popular_2i1 img{
+min-height:228px; 
+ }
+ }
+@media (min-width:1201px) and (max-width:1350px) {
+
+ }
+
+
+
+

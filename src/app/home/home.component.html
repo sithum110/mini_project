@@ -1,0 +1,706 @@
+<section id="header">
+	<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><i class="fa fa-home"></i> My Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="tag_menu active_tab" routerlink="Home">Home</a>
+                    </li>
+					<li class="dropdown">
+					  <a class="tag_menu" href="#" data-toggle="dropdown" role="button" aria-expanded="false">Property<span class="caret"></span></a>
+					  <ul class="dropdown-menu drop_1" role="menu">
+						<li><a routerLink="/list" routerLinkActive="active" ariaCurrentWhenActive="page">Property List</a></li>
+						<li><a routerLink="/detail" routerLinkActive="active" ariaCurrentWhenActive="page">Property Detail</a></li>
+					  </ul>
+                    </li>
+					<li class="dropdown">
+					  <a class="tag_menu" href="#" data-toggle="dropdown" role="button" aria-expanded="false">Blog<span class="caret"></span></a>
+					  <ul class="dropdown-menu drop_1" role="menu">
+						<li><a routerLink="/blog" routerLinkActive="active" ariaCurrentWhenActive="page" >Blog</a></li>
+						<li><a routerLink="/blog-detail" routerLinkActive="active" ariaCurrentWhenActive="page">Blog Detail</a></li>
+					  </ul>
+                    </li>
+					<li class="dropdown">
+					  <a class="tag_menu" href="#" data-toggle="dropdown" role="button" aria-expanded="false">Pages<span class="caret"></span></a>
+					  <ul class="dropdown-menu drop_1" role="menu">
+						<li><a routerLink="/agent" routerLinkActive="active" ariaCurrentWhenActive="page">Agent</a></li>
+						<li><a routerLink="/agency" routerLinkActive="active" ariaCurrentWhenActive="page">Agency Page</a></li>
+						<li><a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About Us</a></li>
+						<li><a routerLink="/property" routerLinkActive="active" ariaCurrentWhenActive="page">Submit Property</a></li>
+					  </ul>
+                    </li>
+					<li>
+                        <a class="tag_menu" routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contact</a>
+                    </li>
+                </ul>
+				<ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="tag_menu" routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Log In / Sign Up</a>
+                    </li>
+					<li>
+                        <a class="tag_menu button_1 mgt" routerLink="/property" routerLinkActive="active" ariaCurrentWhenActive="page">Submit Property</a>
+                    </li>
+                </ul>
+				 
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+</section>
+
+<section id="center" class="center_home clearfix">
+<div class="center_home_m clearfix">
+ <div class="container">
+  <div class="row">
+   <div class="center_home_1 clearfix">
+    <h1 class="text-center col">Find Your RealHome</h1>
+	<div class="center_home_1i clearfix">
+	 <div class="col-sm-4">
+	  <div class="center_home_1i1 clearfix">
+	    <input placeholder="Neighborhood" class="form-control" type="text">
+	  </div>
+	 </div>
+	 <div class="col-sm-4">
+	  <div class="center_home_1i1 clearfix">
+	    <select class="form-control" name="Location">
+		<option value="">All Cities</option>
+		<option value="family-house">New York</option>
+		<option value="apartment">Los Angeles</option>
+		<option value="condo">Chicago</option>
+		<option value="condo">Philadelphia</option>
+		<option value="condo">San Francisco</option>
+       </select>
+	  </div>
+	 </div>
+	 <div class="col-sm-4">
+	  <div class="center_home_1i1 clearfix">
+	    <select class="form-control" name="property">
+		<option value="">Property Type</option>
+		<option value="family-house">Family House</option>
+		<option value="apartment">Apartment</option>
+		<option value="condo">Condo</option>
+       </select>
+	  </div>
+	 </div>
+	</div>
+	<div class="center_home_1i clearfix">
+	 <div class="col-sm-4">
+	  <div class="center_home_1i1 clearfix">
+	    <select class="form-control" name="beds" id="beds">
+		<option value="">Bedrooms</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+     </select>
+	  </div>
+	 </div>
+	 <div class="col-sm-4">
+	  <div class="center_home_1i1 clearfix">
+	    <select class="form-control" name="beds" id="beds">
+		<option value="">Bathrooms</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+     </select>
+	  </div>
+	 </div>
+	 <div class="col-sm-4">
+	  <div class="center_home_1i1 clearfix">
+	    <h5 class="mgt text-center"><a class="button_1 block mgt" href="#">Search Result</a></h5>
+	  </div>
+	 </div>
+	</div>
+   </div>
+  </div>
+ </div>
+</div>
+</section>
+
+<section id="popular">
+ <div class="container">
+  <div class="row">
+   <div class="popular_1 text-center clearfix">
+    <div class="col-sm-12">
+	 <h1 class="mgt">New & Top Rated Property</h1>
+	 <p>Find new & top rated property for you.</p>
+	</div>
+   </div>
+   <div class="popular_2 clearfix">
+    <div class="col-sm-4">
+     <div class="popular_2i clearfix">
+	   <div class="popular_2i1 clearfix">
+	    <a href="#"><img src="./assets/img/2.jpg" class="iw" alt="abc"></a>
+	   </div>
+	   <div class="popular_2i2 clearfix">
+	    <h5 class="mgt"><a href="#">FOR RENT</a></h5>
+	   </div>
+	 </div>
+	 <div class="popular_2i3 clearfix">
+	    <h5 class="mgt"><a href="#">Energy Certificate For EU <i class="fa fa-check-square col_1"></i></a></h5>
+		<h4 class="col_1">$13,599 / <span class="col_2">Month</span></h4>
+		<h6><i class="fa fa-hotel col_2"></i> 3 Beds <span><i class="fa fa-home col_2"></i> 2 Bath</span></h6>
+	   </div>
+	</div>
+	<div class="col-sm-4">
+     <div class="popular_2i clearfix">
+	   <div class="popular_2i1 clearfix">
+	    <a href="#"><img src="./assets/img/3.jpg" class="iw" alt="abc"></a>
+	   </div>
+	   <div class="popular_2i2 clearfix">
+	    <h5 class="mgt"><a href="#">FOR SALE</a></h5>
+	   </div>
+	 </div>
+	 <div class="popular_2i3 clearfix">
+	    <h5 class="mgt"><a href="#">Modern Family Home <i class="fa fa-check-square col_1"></i></a></h5>
+		<h4 class="col_1">$11,550 / <span class="col_2">Month</span></h4>
+		<h6><i class="fa fa-hotel col_2"></i> 3 Beds <span><i class="fa fa-home col_2"></i> 2 Bath</span></h6>
+	   </div>
+	</div>
+	<div class="col-sm-4">
+     <div class="popular_2i clearfix">
+	   <div class="popular_2i1 clearfix">
+	    <a href="#"><img src="./assets/img/4.jpg" class="iw" alt="abc"></a>
+	   </div>
+	   <div class="popular_2i2 clearfix">
+	    <h5 class="mgt"><a href="#">FOR RENT</a></h5>
+	   </div>
+	 </div>
+	 <div class="popular_2i3 clearfix">
+	    <h5 class="mgt"><a href="#">Real Luxury Villa <i class="fa fa-check-square col_1"></i></a></h5>
+		<h4 class="col_1">$10,599 / <span class="col_2">Month</span></h4>
+		<h6><i class="fa fa-hotel col_2"></i> 3 Beds <span><i class="fa fa-home col_2"></i> 2 Bath</span></h6>
+	   </div>
+	</div>
+   </div>
+   <div class="popular_2 clearfix">
+    <div class="col-sm-4">
+     <div class="popular_2i clearfix">
+	   <div class="popular_2i1 clearfix">
+	    <a href="#"><img src="./assets/img/5.jpg" class="iw" alt="abc"></a>
+	   </div>
+	   <div class="popular_2i2 clearfix">
+	    <h5 class="mgt"><a href="#">FOR RENT</a></h5>
+	   </div>
+	 </div>
+	 <div class="popular_2i3 clearfix">
+	    <h5 class="mgt"><a href="#">Energy Certificate For EU <i class="fa fa-check-square col_1"></i></a></h5>
+		<h4 class="col_1">$13,599 / <span class="col_2">Month</span></h4>
+		<h6><i class="fa fa-hotel col_2"></i> 3 Beds <span><i class="fa fa-home col_2"></i> 2 Bath</span></h6>
+	   </div>
+	</div>
+	<div class="col-sm-4">
+     <div class="popular_2i clearfix">
+	   <div class="popular_2i1 clearfix">
+	    <a href="#"><img src="./assets/img/6.jpg" class="iw" alt="abc"></a>
+	   </div>
+	   <div class="popular_2i2 clearfix">
+	    <h5 class="mgt"><a href="#">FOR SALE</a></h5>
+	   </div>
+	 </div>
+	 <div class="popular_2i3 clearfix">
+	    <h5 class="mgt"><a href="#">Modern Family Home <i class="fa fa-check-square col_1"></i></a></h5>
+		<h4 class="col_1">$11,550 / <span class="col_2">Month</span></h4>
+		<h6><i class="fa fa-hotel col_2"></i> 3 Beds <span><i class="fa fa-home col_2"></i> 2 Bath</span></h6>
+	   </div>
+	</div>
+	<div class="col-sm-4">
+     <div class="popular_2i clearfix">
+	   <div class="popular_2i1 clearfix">
+	    <a href="#"><img src="./assets/img/7.jpg" class="iw" alt="abc"></a>
+	   </div>
+	   <div class="popular_2i2 clearfix">
+	    <h5 class="mgt"><a href="#">FOR RENT</a></h5>
+	   </div>
+	 </div>
+	 <div class="popular_2i3 clearfix">
+	    <h5 class="mgt"><a href="#">Real Luxury Villa <i class="fa fa-check-square col_1"></i></a></h5>
+		<h4 class="col_1">$10,599 / <span class="col_2">Month</span></h4>
+		<h6><i class="fa fa-hotel col_2"></i> 3 Beds <span><i class="fa fa-home col_2"></i> 2 Bath</span></h6>
+	   </div>
+	</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="location">
+ <div class="container">
+  <div class="row">
+   <div class="popular_1 text-center clearfix">
+    <div class="col-sm-12">
+	 <h1 class="mgt">Most Popular Locations</h1>
+	 <p>Top & perfect 450+ location property.</p>
+	</div>
+   </div>
+   <div class="location_1 clearfix">
+    <div class="col-sm-4">
+	 <div class="location_1i clearfix">
+	  <div class="location_1i1 clearfix">
+	   <a href="#"><img src="./assets/img/8.jpg" class="iw" alt="abc"></a>
+	  </div>
+	  <div class="location_1i2 text-center clearfix">
+	   <h4 class="mgt"><a class="col" href="#">New York City</a></h4>
+	   <h5><a class="col" href="#">213 Properties</a></h5>
+	  </div>
+	 </div>
+	</div>
+	<div class="col-sm-8">
+	 <div class="location_1i clearfix">
+	  <div class="location_1i1 clearfix">
+	   <a href="#"><img src="./assets/img/9.jpg" class="iw" alt="abc"></a>
+	  </div>
+	  <div class="location_1i2 text-center clearfix">
+	   <h4 class="mgt"><a class="col" href="#">Los Angeles</a></h4>
+	   <h5><a class="col" href="#">283 Properties</a></h5>
+	  </div>
+	 </div>
+	</div>
+   </div>
+   <div class="location_1 clearfix">
+    <div class="col-sm-4">
+	 <div class="location_1i clearfix">
+	  <div class="location_1i1 clearfix">
+	   <a href="#"><img src="./assets/img/10.jpg" class="iw" alt="abc"></a>
+	  </div>
+	  <div class="location_1i2 text-center clearfix">
+	   <h4 class="mgt"><a class="col" href="#">America</a></h4>
+	   <h5><a class="col" href="#">477 Properties</a></h5>
+	  </div>
+	 </div>
+	</div>
+	<div class="col-sm-4">
+	 <div class="location_1i clearfix">
+	  <div class="location_1i1 clearfix">
+	   <a href="#"><img src="./assets/img/11.jpg" class="iw" alt="abc"></a>
+	  </div>
+	  <div class="location_1i2 text-center clearfix">
+	   <h4 class="mgt"><a class="col" href="#">London</a></h4>
+	   <h5><a class="col" href="#">353 Properties</a></h5>
+	  </div>
+	 </div>
+	</div>
+	<div class="col-sm-4">
+	 <div class="location_1i clearfix">
+	  <div class="location_1i1 clearfix">
+	   <a href="#"><img src="./assets/img/12.jpg" class="iw" alt="abc"></a>
+	  </div>
+	  <div class="location_1i2 text-center clearfix">
+	   <h4 class="mgt"><a class="col" href="#">United States</a></h4>
+	   <h5><a class="col" href="#">323 Properties</a></h5>
+	  </div>
+	 </div>
+	</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="client">
+ <div class="container">
+  <div class="row">
+   <div class="client_1  clearfix">
+    <div class="col-sm-4">
+	 <div class="client_1l clearfix">
+	  <h1 class="mgt">What Clients Saying</h1>
+	  <p>Lorem ipsum dolor sit amet, elit. Sed cursus ante dapibus diam. Nulla quis sem at nibh elementum imperdiet. Fusce nec tellus sed augue semper porta. Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+	  <h5><a class="button_1" href="#">See More Reviewer</a></h5>
+	 </div>
+	</div>
+	<div class="col-sm-8">
+	 <div class="client_1r clearfix">
+	   <div id="carousel-example" class="carousel slide" data-ride="carousel">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+				 <div class="col-sm-6 space_left">
+				  <div class="client_1ri clearfix">
+				    <img src="./assets/img/13.jpg" class="img-circle" alt="abc">
+					<h5 class="mgt col_1"> Eget Nulla</h5>
+					<h6>Google Of Teacher</h6>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ante dapibus diam. Nulla quis sem at nibh elementum imperdiet. Fusce nec tellus sed augue semper porta. Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent per conubia nostra. </p>
+				  </div>
+				  </div>
+                 <div class="col-sm-6 space_left">
+				  <div class="client_1ri clearfix">
+				    <img src="./assets/img/14.jpg" class="img-circle" alt="abc">
+					<h5 class="mgt col_1"> Sed Cursus</h5>
+					<h6>Founder</h6>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ante dapibus diam. Nulla quis sem at nibh elementum imperdiet. Fusce nec tellus sed augue semper porta. Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent per conubia nostra. </p>
+				  </div>
+				  </div>
+                </div>
+                <div class="item">
+                  <div class="col-sm-6 space_left">
+				  <div class="client_1ri clearfix">
+				    <img src="./assets/img/15.jpg" class="img-circle" alt="abc">
+					<h5 class="mgt col_1"> Ante Dapibus</h5>
+					<h6>Google Of Teacher</h6>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ante dapibus diam. Nulla quis sem at nibh elementum imperdiet. Fusce nec tellus sed augue semper porta. Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent per conubia nostra. </p>
+				  </div>
+				  </div>
+                  <div class="col-sm-6 space_left">
+				  <div class="client_1ri clearfix">
+				    <img src="./assets/img/16.jpg" class="img-circle" alt="abc">
+					<h5 class="mgt col_1"> Nulla Quis</h5>
+					<h6>Founder</h6>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ante dapibus diam. Nulla quis sem at nibh elementum imperdiet. Fusce nec tellus sed augue semper porta. Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent per conubia nostra. </p>
+				  </div>
+				  </div>
+                </div>
+            </div>
+        </div>
+	 </div>
+	</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="price">
+ <div class="container">
+  <div class="row">
+    <div class="popular_1 text-center clearfix">
+    <div class="col-sm-12">
+	 <h1 class="mgt"> Our Pricing Plan</h1>
+	 <p>We offer best and smart packages for you.</p>
+	</div>
+   </div>
+    <div class="price_1 clearfix">
+    <div class="col-sm-4">
+     <div class="price_1i text-center clearfix">
+	  <h6 class="mgt col_1 pull-right">Recommended</h6>
+	  <h4>BASIC PLAN</h4>
+	  <p>Start With Basic Package</p>
+	  <h1 class="col_1"><span class="col_2">$</span>99</h1>
+	  <ul>
+	   <li>15+ Listings</li>
+	   <li>Contact With Agent</li>
+	   <li>2 Month Validity</li>
+	   <li>7x24 Fully Support</li>
+	   <li>25GB Space</li>
+	   <li>Remote Support</li>
+	  </ul>
+	  <h5><a class="button_1" href="#">Get a free trial</a></h5>
+	 </div>
+	</div>
+	<div class="col-sm-4">
+     <div class="price_1i text-center clearfix">
+	  <h6 class="mgt col_1 pull-right">Popular</h6>
+	  <h4>STANDARD PLAN</h4>
+	  <p>Start With Platinum Package</p>
+	  <h1 class="col_3"><span class="col_2">$</span>149</h1>
+	  <ul>
+	   <li>15+ Listings</li>
+	   <li>Contact With Agent</li>
+	   <li>2 Month Validity</li>
+	   <li>7x24 Fully Support</li>
+	   <li>25GB Space</li>
+	   <li>Remote Support</li>
+	  </ul>
+	  <h5><a class="button_1" href="#">Choose Plan</a></h5>
+	 </div>
+	</div>
+	<div class="col-sm-4">
+     <div class="price_1i text-center clearfix">
+	  <h6 class="mgt col_1 pull-right">Recommended</h6>
+	  <h4>EXTENDED PLAN</h4>
+	  <p>Start With Standard Package</p>
+	  <h1 class="col_1"><span class="col_2">$</span>129</h1>
+	  <ul>
+	   <li>15+ Listings</li>
+	   <li>Contact With Agent</li>
+	   <li>2 Month Validity</li>
+	   <li>7x24 Fully Support</li>
+	   <li>25GB Space</li>
+	   <li>Remote Support</li>
+	  </ul>
+	  <h5><a class="button_1" href="#">Get a free trial</a></h5>
+	 </div>
+	</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="places">
+ <div class="places_m clearfix">
+  <div class="container">
+  <div class="row">
+   <div class="places_1 text-center clearfix">
+    <div class="col-sm-12">
+	 <h1 class="mgt col">Are You Searching Top Places</h1>
+	 <p class="col">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitursodales ligula in libero.</p>
+	 <h5><a class="button_1" href="#">Browse Top Property Places</a></h5>
+	</div>
+   </div>
+  </div>
+ </div>
+ </div>
+</section>
+
+<section id="work_h">
+ <div class="container">
+  <div class="row">
+   <div class="popular_1 text-center clearfix">
+    <div class="col-sm-12">
+	 <h1 class="mgt"> See How It Works</h1>
+	 <p>How to start work with us and working process</p>
+	</div>
+   </div>
+   <div class="work_h_1 clearfix">
+     <div class="col-sm-4">
+	  <div class="work_h_1i text-center clearfix">
+	   <div class="work_h_1ii clearfix">
+	    <span class="col_4"><i class="fa fa-user"></i></span>
+	   </div>
+	   <div class="work_h_1ii1 clearfix">
+	    <h5 class="bg_1">01</h5>
+	   </div>
+	  </div>
+	  <div class="work_h_1i1 text-center clearfix">
+	   <h4>Create An Account</h4>
+	   <p>There are many variations of passages of Lorem Ipsum available, but the majority have Ipsum available.</p>
+	  </div>
+	 </div>
+	 <div class="col-sm-4">
+	  <div class="work_h_1i text-center clearfix">
+	   <div class="work_h_1ii clearfix">
+	    <span class="col_5"><i class="fa fa-search"></i></span>
+	   </div>
+	   <div class="work_h_1ii1 clearfix">
+	    <h5 class="bg_2">03</h5>
+	   </div>
+	  </div>
+	  <div class="work_h_1i1 text-center clearfix">
+	   <h4>Find & Search Property</h4>
+	   <p>There are many variations of passages of Lorem Ipsum available, but the majority have Ipsum available.</p>
+	  </div>
+	 </div>
+	 <div class="col-sm-4">
+	  <div class="work_h_1i text-center clearfix">
+	   <div class="work_h_1ii clearfix">
+	    <span class="col_6"><i class="fa fa-location-arrow"></i></span>
+	   </div>
+	   <div class="work_h_1ii1 clearfix">
+	    <h5 class="bg_3">01</h5>
+	   </div>
+	  </div>
+	  <div class="work_h_1i1 text-center clearfix">
+	   <h4>Book Your Property</h4>
+	   <p>There are many variations of passages of Lorem Ipsum available, but the majority have Ipsum available.</p>
+	  </div>
+	 </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="agent_h">
+ <div class="container">
+  <div class="row">
+   <div class="popular_1 text-center clearfix">
+    <div class="col-sm-12">
+	 <h1 class="mgt"> Most Popular Agent</h1>
+	 <p>Find new & most popular property for you.</p>
+	</div>
+   </div>
+   <div class="agent_h_1 clearfix">
+    <div class="col-sm-4">
+	 <div class="agent_h_1i text-center clearfix">
+	  <span class="text-left span_1">
+	  <a href="#"><i class="fa fa-bookmark-o"></i></a>
+	  <a class="col_5 pull-right" href="#"><i class="fa fa-phone"></i></a>
+	  </span>
+	  <img src="./assets/img/13.jpg" class="img-circle" alt="abc">
+	  <h4><a href="#">Nulla Quis</a></h4>
+	  <h6 class="mgt"><i class="fa fa-map-marker"></i> 2589 Lorem Lane</h6>
+	  <span>
+	   <i class="fa fa-star col_1"></i>
+	   <i class="fa fa-star col_1"></i>
+	   <i class="fa fa-star col_1"></i>
+	   <i class="fa fa-star col_1"></i>
+	   <i class="fa fa-star-half-o col_2"></i>
+	  </span>
+	  <h5 class="text-left">Property<span class="pull-right">336</span></h5>
+	  <h5 class="text-left bg_1">Email<span class="pull-right">infogmail.com</span></h5>
+	  <h5 class="text-left">Phone<span class="pull-right">1234567890</span></h5><br>
+	  <h5><a class="button block" href="#">View Profile <i class="fa fa-long-arrow-right"></i></a></h5>
+	 </div>
+	</div>
+	<div class="col-sm-4">
+	 <div class="agent_h_1i text-center clearfix">
+	  <span class="text-left span_1">
+	  <a href="#"><i class="fa fa-bookmark-o"></i></a>
+	  <a class="col_5 pull-right" href="#"><i class="fa fa-phone"></i></a>
+	  </span>
+	  <img src="./assets/img/14.jpg" class="img-circle" alt="abc">
+	  <h4><a href="#">Sed Cursus</a></h4>
+	  <h6 class="mgt"><i class="fa fa-map-marker"></i> 2589 Lorem Lane</h6>
+	  <span>
+	   <i class="fa fa-star col_1"></i>
+	   <i class="fa fa-star col_1"></i>
+	   <i class="fa fa-star col_1"></i>
+	   <i class="fa fa-star col_1"></i>
+	   <i class="fa fa-star-half-o col_2"></i>
+	  </span>
+	  <h5 class="text-left">Property<span class="pull-right">336</span></h5>
+	  <h5 class="text-left bg_1">Email<span class="pull-right">infogmail.com</span></h5>
+	  <h5 class="text-left">Phone<span class="pull-right">1234567890</span></h5><br>
+	  <h5><a class="button block" href="#">View Profile <i class="fa fa-long-arrow-right"></i></a></h5>
+	 </div>
+	</div>
+	<div class="col-sm-4">
+	 <div class="agent_h_1i text-center clearfix">
+	  <span class="text-left span_1">
+	  <a href="#"><i class="fa fa-bookmark-o"></i></a>
+	  <a class="col_5 pull-right" href="#"><i class="fa fa-phone"></i></a>
+	  </span>
+	  <img src=".assets/img/16.jpg" class="img-circle" alt="abc">
+	  <h4><a href="#">Ante Dapibus</a></h4>
+	  <h6 class="mgt"><i class="fa fa-map-marker"></i> 2589 Lorem Lane</h6>
+	  <span>
+	   <i class="fa fa-star col_1"></i>
+	   <i class="fa fa-star col_1"></i>
+	   <i class="fa fa-star col_1"></i>
+	   <i class="fa fa-star col_1"></i>
+	   <i class="fa fa-star-half-o col_2"></i>
+	  </span>
+	  <h5 class="text-left">Property<span class="pull-right">336</span></h5>
+	  <h5 class="text-left bg_1">Email<span class="pull-right">infogmail.com</span></h5>
+	  <h5 class="text-left">Phone<span class="pull-right">1234567890</span></h5><br>
+	  <h5><a class="button block" href="#">View Profile <i class="fa fa-long-arrow-right"></i></a></h5>
+	 </div>
+	</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="blog_h">
+ <div class="container">
+  <div class="row">
+   <div class="popular_1 text-center clearfix">
+    <div class="col-sm-12">
+	 <h1 class="mgt"> Latest Articles</h1>
+	 <p>We post regulary most powerful articles for help and support.</p>
+	</div>
+   </div>
+   <div class="blog_h_1 clearfix">
+    <div class="col-sm-4">
+     <div class="blog_h_1i clearfix">
+	  <a href="#"><img src="./assets/img/18.jpg" class="iw" alt="abc"></a>
+	  <h5 class="col_2"><i class="fa fa-calendar"></i> 10 july 2020</h5>
+	  <h4><a href="#">Why People Choose Listio For Own Properties</a></h4>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+	  <h5><a class="button_1" href="#">Continue</a></h5>
+	 </div>
+	</div>
+	<div class="col-sm-4">
+     <div class="blog_h_1i clearfix">
+	  <a href="#"><img src="./assets/img/19.jpg" class="iw" alt="abc"></a>
+	  <h5 class="col_2"><i class="fa fa-calendar"></i> 12 June 2020</h5>
+	  <h4><a href="#">List Of Benifits And Impressive Listeo Services</a></h4>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+	  <h5><a class="button_1" href="#">Continue</a></h5>
+	 </div>
+	</div>
+	<div class="col-sm-4">
+     <div class="blog_h_1i clearfix">
+	  <a href="#"><img src="./assets/img/20.jpg" class="iw" alt="abc"></a>
+	  <h5 class="col_2"><i class="fa fa-calendar"></i> 17 Jan 2020</h5>
+	  <h4><a href="#">What People Says About Listio Properties</a></h4>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+	  <h5><a class="button_1" href="#">Continue</a></h5>
+	 </div>
+	</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="footer">
+ <div class="container">
+  <div class="row">
+   <div class="footer_1 clearfix">
+    <div class="col-sm-3">
+	 <div class="footer_1i1 clearfix">
+	  <h4 class="mgt col">About Us</h4>
+	  <p class="col_2">This My Template is a team of young professionals that has been successfully creating Creative Website templates already for several years.</p>
+	  <h5><a class="button col_2" href="#"><i class="fa fa-android"></i> Google Store</a></h5>
+	 </div>
+	</div>
+	<div class="col-sm-3">
+	 <div class="footer_1i1 clearfix">
+	  <h4 class="mgt col">Useful Links</h4>
+	  <ul>
+	   <li><a class="col_2" href="#">About Us</a></li>
+	   <li><a class="col_2" href="#">FAQs Page</a></li>
+	   <li><a class="col_2" href="#">Checkout</a></li>
+	   <li><a class="col_2" href="#">Services</a></li>
+	   <li><a class="col_2" href="#">Contact Us</a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="col-sm-3">
+	 <div class="footer_1i1 clearfix">
+	  <h4 class="mgt col">Get In Touch</h4>
+	  <h6 class="col_2"><i class="fa fa-map-marker"></i> 65 North Park Avenue, USA</h6>
+	  <h6 class="col_2"><i class="fa fa-envelope"></i> <a class="col_2" href="#">infogmail.com</a></h6>
+	  <h6 class="col_2"><i class="fa fa-phone"></i> +91 123 456 7890</h6>
+	  <h6 class="col_2"><i class="fa fa-fax"></i> +91 123 456 7890</h6>
+	  <h6 class="col_2"><i class="fa fa-globe"></i> All Country Realhome</h6>
+	 </div>
+	</div>
+	<div class="col-sm-3">
+	 <div class="footer_1i1 clearfix">
+	  <h4 class="mgt col">Follow Us</h4>
+      <p class="col_2">Follow & Subscribe your email to get new business tips.</p>
+	  <ul class="social-network social-circle">
+                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+	  <input class="form-control" placeholder="Your Email" type="text">
+	 </div>
+	</div>
+   </div>
+   <div class="footer_2 text-center clearfix">
+	 <div class="col-sm-12">
+	  <p class="col_2 mgt">© 2013 Your Website Name. All Rights Reserved | Design by <a class="col_1" href="http://www.templateonweb.com">TemplateOnWeb</a></p>
+	 </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<script src="js/classie.js"></script>
+<script src="js/cbpAnimatedHeader.js"></script>

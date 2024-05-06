@@ -1,0 +1,187 @@
+.center_about{
+    margin-top:80px; 
+    padding-top:80px;
+    padding-bottom:80px; 
+    background: #03a9f414;
+     }
+    #blog_h{
+    padding-top:50px;
+    padding-bottom:50px;
+     }
+    .blog_pg_1r1 {
+        padding: 20px 15px 30px 15px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.6);
+        margin-top:30px;
+    }
+    .blog_pg_1r1 .form-control {
+        height: 45px;
+        font-size: 18px;
+    }
+    .blog_pg_1r1 .btn {
+        margin-left: 0!important;
+        background: #03a9f4;
+        border-color: #03a9f4;
+        padding: 11.5px 20px;
+    }
+    .blog_pg_1r1 h6 {
+        border-bottom: 1px dashed #ddd;
+        padding-bottom: 15px;
+    }
+    .blog_detail_r1{
+    padding: 20px 15px 30px 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    margin-top:30px;
+     }
+    .blog_detail_r1ir h6{
+    margin-top:8px; 
+     }
+    .blog_detail_r1ir h6 i{
+    margin-right:5px; 
+     }
+    .blog_detail_r1i{
+    margin-top:20px; 
+     }
+    .blog_detail_r2{
+    padding: 20px 15px 30px 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    margin-top:30px;
+     }
+    .blog_detail_r2 ul li{
+    display:inline-block;
+    margin-bottom:5px; 
+     }
+    .blog_detail_r2 ul li a{
+     display:block;
+     border:1px solid #ddd;
+     padding:8px
+     }
+    .blog_detail_r2 ul li a:hover{
+    background:#03a9f4;
+    color:#fff;
+    border:1px solid #03a9f4;
+     }
+    .blog_detail_l{
+    padding:30px 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6); 
+     }
+    .blog_detail_l h6 a{
+    margin-right:30px; 
+    color:#999;
+     }
+    .blog_detail_l h6 a i{
+    margin-right:5px; 
+     }
+    .blog_detail_l blockquote {
+        margin-bottom: 0;
+        border-color: #03a9f4;
+        margin-top:20px;
+        background: #03a9f414;
+        padding:30px;
+    }
+    .blog_detail_lil ul li{
+    display:inline-block;
+    margin-bottom:5px; 
+     }
+    .blog_detail_lil ul li a{
+     display:block;
+     border:1px solid #ddd;
+     padding:8px
+     }
+    .blog_detail_lil ul li a:hover{
+    background:#03a9f4;
+    color:#fff;
+    border:1px solid #03a9f4;
+     }
+    .blog_detail_lir .social-network a {
+        background: rgba(2, 28, 82, 1);
+    }
+    .blog_detail_l1{
+    padding:30px 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    margin-top:30px;
+     }
+    .blog_detail_l1 .social-network a {
+        background: rgba(2, 28, 82, 1);
+    }
+    .blog_detail_l2{
+    padding:30px 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    margin-top:30px; 
+     }
+    .blog_detail_l2i1 h4 a{
+    font-size:16px; 
+     }
+    .blog_detail_l2i1{
+    margin-top:30px; 
+    border-bottom:1px solid #eee;
+    padding-bottom:30px; 
+     }
+    .blog_detail_l3{
+    padding:30px 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    margin-top:30px; 
+     }
+    .blog_detail_l3i .form-control{
+    height:50px;
+    font-size:18px;
+    margin-top:20px;
+    border-radius:0; 
+     }
+    .blog_detail_l3i .form_1{
+    height:150px;
+     }
+    /*********************blog_end****************/
+    
+    
+    
+    @media screen and (max-width : 767px){
+    .blog_detail_l {
+    text-align:center; 
+     }
+    .blog_detail_l h6 a{
+    margin-right:5px; 
+     }
+    .blog_detail_lir {
+    text-align:center;  
+     }
+    .blog_detail_l2 {
+    text-align:center; 
+     }
+    .blog_detail_l2i1 .pull-right{
+    float:none!important; 
+     }
+    .blog_detail_l2i1 img{
+    margin-bottom:15px;
+     }
+    .blog_detail_r {
+    margin-top:20px; 
+     }
+    .blog_pg_1r1 {
+    text-align:center;  
+     }
+    .blog_pg_1r1 h6{
+    text-align:left;  
+     }
+    .blog_detail_r1 {
+    text-align:center; 
+     }
+    .blog_detail_r1ir {
+    margin-top:15px; 
+     }
+    .blog_detail_r2 {
+    text-align:center;  
+     }
+    .blog_detail_l3 {
+    text-align:center;  
+     }
+    }
+    
+    @media (min-width:768px) and (max-width:991px) {
+    
+     }
+    @media (min-width:992px) and (max-width:1200px) {
+    
+     }
+    @media (min-width:1201px) and (max-width:1350px) {
+    
+     }

@@ -1,0 +1,89 @@
+.center_about{
+    margin-top:80px; 
+    padding-top:80px;
+    padding-bottom:80px; 
+    background: #03a9f414;
+     }
+    #prop{
+    padding-top:50px;
+    padding-bottom:50px; 
+    background:#fafafa;
+     }
+    .submit_1 hr{
+    border-color:#eee; 
+     }
+    .submit_1{
+    background:#fff;
+    padding:40px 40px;
+    margin-top:30px; 
+     }
+    .submit_1 .form-control{
+    margin-top:15px;
+    height:50px;
+    font-size:16px; 
+    border-radius:0;
+     }
+    .submit_1 .form_o{
+    height:150px; 
+     }
+    .submit_1 h5{
+    margin-top:20px;
+     }
+    .submit_1ii .span_1 i{
+    color:#1ABC9C;
+    font-size:60px;
+    display:inline-block;
+     }
+    .submit_1ii h5{
+    color:#1ABC9C;
+     }
+    .submit_1ii{
+    border:2px dashed #1ABC9C;
+    margin-top:30px;
+    text-align:center;
+    padding:60px 60px 70px 60px;
+     }
+    .submit_2{
+    background:#fff;
+    padding:40px 40px;
+    margin-top:30px; 
+     }
+    .submit_2i h5 .span_1{
+     margin-left:5px;
+     }
+    .submit_2i h5 {
+    display:inline-block;
+    margin-left:10px;
+    margin-right:10px;
+    font-size:16px;
+    margin-top:20px;
+     }
+    .submit_2 hr {
+    margin-bottom:0;
+     }
+    .submit_3{
+    margin-top:30px; 
+     }
+    /*********************property_end****************/
+    
+    
+    
+    @media screen and (max-width : 767px){
+    #prop{
+    text-align:center;
+     }
+    .submit_1 h5{
+     margin-top:15px!important;
+     }
+    }
+    
+    @media (min-width:768px) and (max-width:991px) {
+    
+     }
+    @media (min-width:992px) and (max-width:1200px) {
+    
+     }
+    @media (min-width:1201px) and (max-width:1350px) {
+    
+     }
+    

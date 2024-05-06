@@ -1,0 +1,79 @@
+/*
+Template Name: My Home
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************about****************/
+.center_about{
+    margin-top:80px; 
+    padding-top:80px;
+    padding-bottom:80px; 
+    background: #03a9f414;
+     }
+    #about_page{
+    padding-top:50px;
+    padding-bottom:50px; 
+     }
+    #team_pg{
+    padding-top:50px;
+    padding-bottom:50px; 
+    background: #03a9f414; 
+     }
+    .team_hi1 {
+    background: #fff;
+    padding: 25px 15px 30px 15px;
+    }
+    #carousel-example_1{
+     margin-top:30px;
+     }
+    .team_hi1 .social-network a {
+        background: rgba(2, 28, 82, 1);
+    }
+    #mission{
+    padding-top:50px;
+    padding-bottom:50px; 
+     }
+    .mission_1{
+    margin-top:30px; 
+     }
+    .mission_1ri span i{
+    font-size:50px; 
+     }
+    .mission_1ri{
+    box-shadow: 0 0 5px rgba(0,0,0,0.6); 
+    padding:30px 15px;
+    margin-top:20px;
+     }
+    /*********************about_end****************/
+    
+    
+    
+    @media screen and (max-width : 767px){
+    .about_page_1r {
+    text-align:center;
+    margin-top:15px; 
+     }
+    .team_hi {
+    margin-top:15px; 
+     }
+    .mission_1ri {
+    text-align:center; 
+    margin-top:20px!important; 
+     }
+    }
+    
+    @media (min-width:768px) and (max-width:991px) {
+    .mission_1ri span i{
+    font-size:30px; 
+     }
+     }
+    @media (min-width:992px) and (max-width:1200px) {
+    .mission_1ri span i{
+    font-size:40px; 
+     }
+     }
+    @media (min-width:1201px) and (max-width:1350px) {
+    
+     }

@@ -1,0 +1,140 @@
+
+.center_detail{
+margin-top:80px; 
+ }
+.center_detail img{
+ min-height:500px;
+ }
+.kb_control_left,.kb_control_left:hover,.kb_control_left:active,.kb_control_left:focus,.kb_control_right,.kb_control_right:hover,.kb_control_right:active,.kb_control_right:focus{
+    color:#fff;
+    background:#001238 !important;
+}  
+.kb_control_left,.kb_control_right{
+    top:46%;
+    z-index:2;
+    width:55px;
+    height:55px;
+    text-align:center;
+    -webkit-transition:all ease-in-out .3s;
+    transition:all ease-in-out .3s
+}
+.kb_wrapper:hover .kb_control_left,.kb_wrapper:hover .kb_control_right{
+    opacity:1;
+}
+.kb_icons{
+    line-height:50px !important;
+    font-size:34px!important;
+    font-weight:normal!important;
+}
+.kb_control_left{
+    left:1%!important
+}
+.kb_control_right{
+    right:1%!important
+}
+.center_home .carousel-control{
+ opacity:1;
+ }
+ 
+#list_detail{
+padding-top:50px;
+padding-bottom:50px; 
+background:#03a9f414;
+ }
+.list_detail_1l1 h3 .span_1{
+font-size:18px; 
+ }
+.list_detail_1l1 h3 .span_2{
+font-size:16px; 
+background:#03a9f4;
+color:#fff;
+padding:5px 10px;
+margin-left:20px;
+ }
+.list_detail_1l1 p i{
+margin-right:5px; 
+ }
+.list_detail_1l2{
+background:#fff;
+padding:30px 15px;
+margin-top:30px; 
+ }
+.list_detail_1l2i{
+margin-top:20px; 
+ }
+.home_inner_i {
+  margin-top: 20px;
+}
+.home_inner_i h5 i {
+    margin-right: 5px;
+}
+table {
+    width: 100%;
+    margin-top: 20px;
+}
+td, th {
+    border: 1px solid #eee;
+    padding: 10px;
+	font-weight:bold;
+}
+/*********************list_detail_end****************/
+
+
+
+@media screen and (max-width : 767px){
+.center_detail{
+margin-top:0; 
+ }
+.center_detail img{
+ min-height:300px;
+ }
+.list_detail_1l1 {
+text-align:center; 
+ }
+.list_detail_1l1 h3{
+font-size:22px; 
+ }
+.list_detail_1l1 h3 .span_2{
+margin-left:10px; 
+ }
+.list_detail_1l2 {
+text-align:center; 
+ }
+.list_detail_1l2i .col-sm-3{
+margin-top:15px; 
+ }
+.list_detail_1l2 .col-sm-4{
+margin-top:15px; 
+ }
+.list_detail_1r1 img{
+margin-right:5px; 
+ }
+.list_detail_1r {
+margin-top:20px; 
+ }
+.list_detail_1r2 {
+text-align:center;  
+ }
+.popular_2i3 {
+text-align:center; 
+ }
+table{
+text-align:left; 
+ }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+.center_detail{
+margin-top:72px; 
+ }
+ }
+@media (min-width:992px) and (max-width:1200px) {
+
+ }
+@media (min-width:1201px) and (max-width:1350px) {
+
+ }
+
+
+
+
