@@ -1,0 +1,247 @@
+<section id="header">
+	<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><i class="fa fa-home"></i> My Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="tag_menu active_tab" routerlink="Home">Home</a>
+                    </li>
+					<li class="dropdown">
+					  <a class="tag_menu" href="#" data-toggle="dropdown" role="button" aria-expanded="false">Property<span class="caret"></span></a>
+					  <ul class="dropdown-menu drop_1" role="menu">
+						<li><a routerLink="/list" routerLinkActive="active" ariaCurrentWhenActive="page">Property List</a></li>
+						<li><a routerLink="/detail" routerLinkActive="active" ariaCurrentWhenActive="page">Property Detail</a></li>
+					  </ul>
+                    </li>
+					<li class="dropdown">
+					  <a class="tag_menu" href="#" data-toggle="dropdown" role="button" aria-expanded="false">Blog<span class="caret"></span></a>
+					  <ul class="dropdown-menu drop_1" role="menu">
+						<li><a routerLink="/roomer" routerLinkActive="active" ariaCurrentWhenActive="page" >roomer</a></li>
+						<li><a routerLink="/blog-detail" routerLinkActive="active" ariaCurrentWhenActive="page">Blog Detail</a></li>
+					  </ul>
+                    </li>
+					<li class="dropdown">
+					  <a class="tag_menu" href="#" data-toggle="dropdown" role="button" aria-expanded="false">Pages<span class="caret"></span></a>
+					  <ul class="dropdown-menu drop_1" role="menu">
+						<li><a routerLink="/agent" routerLinkActive="active" ariaCurrentWhenActive="page">Agent</a></li>
+						<li><a routerLink="/agency" routerLinkActive="active" ariaCurrentWhenActive="page">Agency Page</a></li>
+						<li><a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About Us</a></li>
+						<li><a routerLink="/property" routerLinkActive="active" ariaCurrentWhenActive="page">Submit Property</a></li>
+					  </ul>
+                    </li>
+					<li>
+                        <a class="tag_menu" routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contact</a>
+                    </li>
+                </ul>
+				<ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="tag_menu" routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Log In / Sign Up</a>
+                    </li>
+					<li>
+                        <a class="tag_menu button_1 mgt" routerLink="/property" routerLinkActive="active" ariaCurrentWhenActive="page">Submit Property</a>
+                    </li>
+                </ul>
+				 
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+</section>
+<section id="center" class="clearfix center_about">
+    <div class="container clearfix">
+     <div class="row">
+      <div class="center_about_1 text-center clearfix">
+       <div class="col-sm-12">
+        <h1 class="mgt">Welcome to Our Preferences Forum!</h1>
+        <p>Get started by answering the following questions and find your property.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+<section id="questionnaire">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h2>House Sharing Preference Questionnaire</h2>
+          <form id="questionnaireForm" action="#" method="POST">
+            <div class="details_box">
+              <h4>Personal Details</h4><br>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email">
+              </div>
+              <div class="form-group">
+                <label>Gender</label>
+                <div class="radio">
+                  <label><input type="radio" name="male" value="">Female</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="male" value="">Male</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="male" value="">Other</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Birth Day</label>
+                <input type="date" class="form-control" id="name" name="name" placeholder="Enter your birthday">
+              </div>
+              <div class="form-group">
+                <label for="budget">Monthly Budget (in USD):</label>
+                <input type="number" class="form-control" id="budget" name="budget" placeholder="Enter monthly budget">
+              </div>
+            </div>
+            <div class="details_box">
+              <h4>Living Preferences</h4><br>
+              
+              <div class="form-group">
+                <label for="location">Preferred Location:</label>
+                <input type="text" class="form-control" id="location" name="location" placeholder="Enter preferred location">
+              </div>
+              <div class="form-group">
+                <label form="type">Type of co-living space: </label><br>
+               
+                <input type="checkbox" id="apartment" name="apartment" value="">&nbsp;
+                <label for="apartment">Apartment</label><br>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value=""> &nbsp;
+                <label for="house">House</label><br>
+                <div class="form-group">
+                  <label for="amenities">Preferred Amenities:</label>
+                  <input type="text" class="form-control" id="amenities" name="amenities" placeholder="Enter preferred amenities">
+                </div>
+                <div class="form-group">
+                  <label for="lifestyle">Preferred Lifestyle:</label>
+                  <textarea class="form-control" id="lifestyle" name="lifestyle" rows="3" placeholder="Describe your preferred lifestyle"></textarea>
+                </div>
+              </div>
+              
+            </div>
+            <div class="details_box">
+                <h4>Roommate Preferences</h4><br>
+                <div class="form-group">
+                  <label for="roommatePreferences">Roommate Preferences:</label>
+                  <textarea class="form-control" id="roommatePreferences" name="roommatePreferences" rows="3" placeholder="Describe your preferences for roommates (if any)"></textarea>
+                </div>
+                
+            </div>
+            <div class="details_box">
+              <h4>Lifestyle and Interests</h4><br>
+              
+              <div class="form-group">
+                <label>Do you prefer a quiet environment?</label>
+                <div class="radio">
+                  <label><input type="radio" name="quietEnvironment" value="Yes">Yes</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="quietEnvironment" value="No">No</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Do you prefer social gatherings and events?</label>
+                <div class="radio">
+                  <label><input type="radio" name="socialGatherings" value="Yes">Yes</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="socialGatherings" value="No">No</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Do you have any dietary restrictions?</label>
+                <div class="radio">
+                  <label><input type="radio" name="dietaryRestrictions" value="Yes">Yes</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="dietaryRestrictions" value="No">No</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Are you comfortable with pets in the house?</label>
+                <div class="radio">
+                  <label><input type="radio" name="petsInHouse" value="Yes">Yes</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="petsInHouse" value="No">No</label>
+                </div>
+              </div>
+              
+          </div>  
+             <button  type="submit" class="btn btn-primary submit_button">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="footer">
+    <div class="container">
+     <div class="row">
+      <div class="footer_1 clearfix">
+       <div class="col-sm-3">
+        <div class="footer_1i1 clearfix">
+         <h4 class="mgt col">About Us</h4>
+         <p class="col_2">At CoLive, we're redefining the co-living experience with the power of AI. Join us and discover the future of <br>co-living today!.</p>
+         <h5><a class="button col_2" href="#"> Get Started </a></h5>
+        </div>
+       </div>
+       <div class="col-sm-3">
+        <div class="footer_1i1 clearfix">
+         <h4 class="mgt col">Useful Links</h4>
+         <ul>
+          <li><a class="col_2" href="#">About Us</a></li>
+          <li><a class="col_2" href="#">FAQs Page</a></li>
+          <li><a class="col_2" href="#">Checkout</a></li>
+          <li><a class="col_2" href="#">Services</a></li>
+          <li><a class="col_2" href="#">Contact Us</a></li>
+         </ul>
+        </div>
+       </div>
+       <div class="col-sm-3">
+        <div class="footer_1i1 clearfix">
+         <h4 class="mgt col">Get In Touch</h4>
+         <h6 class="col_2"><i class="fa fa-map-marker"></i> Belihuloya, Balangoda</h6>
+         <h6 class="col_2"><i class="fa fa-envelope"></i> <a class="col_2" href="#">colive.com</a></h6>
+         <h6 class="col_2"><i class="fa fa-phone"></i> +94 123 456 7890</h6>
+         <h6 class="col_2"><i class="fa fa-fax"></i> +94 123 456 7890</h6>
+         <h6 class="col_2"><i class="fa fa-globe"></i> All Country Realhome</h6>
+        </div>
+       </div>
+       <div class="col-sm-3">
+        <div class="footer_1i1 clearfix">
+         <h4 class="mgt col">Follow Us</h4>
+         <p class="col_2">Follow & Subscribe your email to get new business tips.</p>
+         <ul class="social-network social-circle">
+                           <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                           <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                           <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                           <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                           <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+         </ul>
+         <input class="form-control" placeholder="Your Email" type="text">
+        </div>
+       </div>
+      </div>
+      <div class="footer_2 text-center clearfix">
+        <div class="col-sm-12">
+         <p class="col_2 mgt">© 2024 CoLive. All Rights Reserved | Design by G-15</p>
+        </div>
+      </div>
+     </div>
+    </div>
+   </section>

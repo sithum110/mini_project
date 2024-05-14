@@ -10,7 +10,7 @@ import { DetailComponent } from './detail/detail.component';
 import { ListComponent } from './list/list.component';
 import { LoginComponent } from './login/login.component';
 import { PropertyComponent } from './property/property.component';
-
+import { RoomerComponent } from './roomer/roomer.component';
 export const routes: Routes = [
 {path:'' ,component:HomeComponent,title:'home apge' },
 {path:'about' ,component:AboutComponent,title:'about page' },
@@ -22,6 +22,6 @@ export const routes: Routes = [
 {path:'detail' ,component:DetailComponent,title:'detail page' },
 {path:'list' ,component:ListComponent,title:'list page' },
 {path:'login' ,component:LoginComponent,title:'login page' },
-{path:'property' ,component:PropertyComponent,title:'property page' }
- 
+{path:'property' ,component:PropertyComponent,title:'property page' },
+{path:'roomer' ,component:RoomerComponent,title:'roomer page' }
 ];
