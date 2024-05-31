@@ -1,64 +1,67 @@
 <body>
-    <section id="header">
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html"><i class="fa fa-home"></i> My Home</a>
-                </div>
-    
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a class="tag_menu active_tab" routerlink="Home">Home</a>
-                        </li>
-                        <li class="dropdown">
-                          <a class="tag_menu" href="#" data-toggle="dropdown" role="button" aria-expanded="false">Property<span class="caret"></span></a>
-                          <ul class="dropdown-menu drop_1" role="menu">
-                            <li><a routerLink="/list" routerLinkActive="active" ariaCurrentWhenActive="page">Property List</a></li>
-                            <li><a routerLink="/detail" routerLinkActive="active" ariaCurrentWhenActive="page">Property Detail</a></li>
-                          </ul>
-                        </li>
-                        <li class="dropdown">
-                          <a class="tag_menu" href="#" data-toggle="dropdown" role="button" aria-expanded="false">Blog<span class="caret"></span></a>
-                          <ul class="dropdown-menu drop_1" role="menu">
-                            <li><a routerLink="/blog" routerLinkActive="active" ariaCurrentWhenActive="page" >Blog</a></li>
-                            <li><a routerLink="/blog-detail" routerLinkActive="active" ariaCurrentWhenActive="page">Blog Detail</a></li>
-                          </ul>
-                        </li>
-                        <li class="dropdown">
-                          <a class="tag_menu" href="#" data-toggle="dropdown" role="button" aria-expanded="false">Pages<span class="caret"></span></a>
-                          <ul class="dropdown-menu drop_1" role="menu">
-                            <li><a routerLink="/agent" routerLinkActive="active" ariaCurrentWhenActive="page">Agent</a></li>
-                            <li><a routerLink="/agency" routerLinkActive="active" ariaCurrentWhenActive="page">Agency Page</a></li>
-                            <li><a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About Us</a></li>
-                            <li><a routerLink="/property" routerLinkActive="active" ariaCurrentWhenActive="page">Submit Property</a></li>
-                          </ul>
-                        </li>
-                        <li>
-                            <a class="tag_menu" routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contact</a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a class="tag_menu" routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Log In / Sign Up</a>
-                        </li>
-                        <li>
-                            <a class="tag_menu button_1 mgt" routerLink="/property" routerLinkActive="active" ariaCurrentWhenActive="page">Submit Property</a>
-                        </li>
-                    </ul>
-                     
-                </div>
-                <!-- /.navbar-collapse -->
+<section id="header">
+	<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><i class="fa fa-home"></i> My Home</a>
             </div>
-            <!-- /.container-fluid -->
-        </nav>
-    </section>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="tag_menu active_tab" routerlink="Home">Home</a>
+                    </li>
+					<li class="dropdown">
+					  <a class="tag_menu" href="#" data-toggle="dropdown" role="button" aria-expanded="false">Property<span class="caret"></span></a>
+					  <ul class="dropdown-menu drop_1" role="menu">
+						<li><a routerLink="/list" routerLinkActive="active" ariaCurrentWhenActive="page">Property List</a></li>
+						<li><a routerLink="/detail" routerLinkActive="active" ariaCurrentWhenActive="page">Property Detail</a></li>
+					  </ul>
+                    </li>
+					<li class="dropdown">
+					  <a class="tag_menu" href="#" data-toggle="dropdown" role="button" aria-expanded="false">Blog<span class="caret"></span></a>
+					  <ul class="dropdown-menu drop_1" role="menu">
+						<li><a routerLink="/blog" routerLinkActive="active" ariaCurrentWhenActive="page" >Blog</a></li>
+						<li><a routerLink="/blog-detail" routerLinkActive="active" ariaCurrentWhenActive="page">Blog Detail</a></li>
+					  </ul>
+                    </li>
+					<li class="dropdown">
+					  <a class="tag_menu" href="#" data-toggle="dropdown" role="button" aria-expanded="false">Pages<span class="caret"></span></a>
+					  <ul class="dropdown-menu drop_1" role="menu">
+						<li><a routerLink="/agent" routerLinkActive="active" ariaCurrentWhenActive="page">Agent</a></li>
+						<li><a routerLink="/agency" routerLinkActive="active" ariaCurrentWhenActive="page">Agency Page</a></li>
+						<li><a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About Us</a></li>
+						<li><a routerLink="/property" routerLinkActive="active" ariaCurrentWhenActive="page">Submit Property</a></li>
+					  </ul>
+                    </li>
+					<li>
+                        <a class="tag_menu" routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contact</a>
+                    </li>
+                </ul>
+				<ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="tag_menu" routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Log In / Sign Up</a>
+                    </li>
+					<li>
+                        <a class="tag_menu button_1 mgt" routerLink="/property" routerLinkActive="active" ariaCurrentWhenActive="page">Submit Property</a>
+                    </li>
+                </ul>
+				 
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+</section>
+
     
     <section id="center" class="center_list clearfix">
     <div class="container">
