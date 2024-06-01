@@ -1,0 +1,100 @@
+.center_about{
+    margin-top:80px; 
+    padding-top:80px;
+    padding-bottom:80px; 
+    background: #03a9f414;
+     }
+    #login{
+    padding-top:50px;
+    padding-bottom:50px; 
+     }
+     
+    .account-box
+    {
+        border: 2px solid rgba(153, 153, 153, 0.75);
+        border-radius: 2px;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -khtml-border-radius: 2px;
+        -o-border-radius: 2px;
+        z-index: 3;
+        font-size: 13px !important;
+        background-color: #ffffff;
+        padding: 20px;
+    }
+    
+    
+    .forgotLnk
+    {
+        margin-top: 10px;
+        display: block;
+    }
+    
+    .purple-bg
+    {
+        background-color: #001238;
+        color: #fff;
+    }
+    .or-box
+    {
+        position: relative;
+        border-top: 1px solid #dfdfdf;
+        padding-top: 20px;
+        margin-top:20px;
+    }
+    .or
+    {
+        color: #666666;
+        background-color: #ffffff;
+        position: absolute;
+        text-align: center;
+        top: -8px;
+        width: 40px;
+        left: 90px;
+    }
+    .account-box .btn:hover
+    {
+        color: #fff;
+    }
+    .btn-facebook
+    {
+        background-color: #3F639E;
+        color: #fff;
+        font-weight:bold;
+    }
+    .btn-google
+    {
+        background-color: #454545;
+        color: #fff;
+        font-weight:bold;
+    }
+    .login_1{
+    width:40%;
+    margin:auto; 
+     }
+    .login_1 .form-control{
+    height:50px; 
+     }
+    /*********************login_end****************/
+    
+    
+    @media screen and (max-width : 767px){
+    .login_1{
+    width:80%; 
+     }
+    .btn-facebook{
+    margin-bottom:10px; 
+     }
+    }
+    
+    @media (min-width:768px) and (max-width:991px) {
+    .btn-facebook{
+    margin-bottom:10px; 
+     }
+     }
+    @media (min-width:992px) and (max-width:1200px) {
+    
+     }
+    @media (min-width:1201px) and (max-width:1350px) {
+    
+     }

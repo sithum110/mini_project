@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><i class="fa fa-home"></i> My Home</a>
+                <a class="navbar-brand" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fa fa-home"></i> CoLive</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -49,9 +49,9 @@
                     <li>
                         <a class="tag_menu" routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Log In / Sign Up</a>
                     </li>
-					<li>
+					<!-- <li>
                         <a class="tag_menu button_1 mgt" routerLink="/property" routerLinkActive="active" ariaCurrentWhenActive="page">Submit Property</a>
-                    </li>
+                    </li> -->
                 </ul>
 				 
             </div>
@@ -62,18 +62,29 @@
 </section>
 
 <section id="center" class="center_home clearfix">
+	
 <div class="center_home_m clearfix">
  <div class="container">
   <div class="row">
    <div class="center_home_1 clearfix">
-    <h1 class="text-center col">Find Your RealHome</h1>
-	<div class="center_home_1i clearfix">
+    <h1 class="text-center col">Welcome to AI-Powered Co-Living Platform!</h1>
+	<p class="text-center col">Your Smart Co-Living Experience</p>
+	<div class="main_button"  >
+		<ul >
+			<li class="button_1"><a href="#" class="text-center">Renters</a></li>
+			<li class="button_1"><a href="#">Owners</a></li>
+			
+		</ul>
+	</div>
+	
+
+	<!-- <div class="center_home_1i clearfix">
 	 <div class="col-sm-4">
 	  <div class="center_home_1i1 clearfix">
 	    <input placeholder="Neighborhood" class="form-control" type="text">
 	  </div>
 	 </div>
-	 <div class="col-sm-4">
+	  <div class="col-sm-4">
 	  <div class="center_home_1i1 clearfix">
 	    <select class="form-control" name="Location">
 		<option value="">All Cities</option>
@@ -97,37 +108,17 @@
 	 </div>
 	</div>
 	<div class="center_home_1i clearfix">
-	 <div class="col-sm-4">
-	  <div class="center_home_1i1 clearfix">
-	    <select class="form-control" name="beds" id="beds">
-		<option value="">Bedrooms</option>
-		<option value="1">1</option>
-		<option value="2">2</option>
-		<option value="3">3</option>
-		<option value="4">4</option>
-		<option value="5">5</option>
-		<option value="6">6</option>
-		<option value="7">7</option>
-		<option value="8">8</option>
-		<option value="9">9</option>
-		<option value="10">10</option>
-     </select>
-	  </div>
-	 </div>
-	 <div class="col-sm-4">
-	  <div class="center_home_1i1 clearfix">
-	    <select class="form-control" name="beds" id="beds">
-		<option value="">Bathrooms</option>
-		<option value="1">1</option>
-		<option value="2">2</option>
-		<option value="3">3</option>
-		<option value="4">4</option>
-		<option value="5">5</option>
-		<option value="6">6</option>
-		<option value="7">7</option>
-		<option value="8">8</option>
-		<option value="9">9</option>
-		<option value="10">10</option>
+		<div class="col-sm-6">
+			<div class="center_home_1i1 clearfix">
+				<button class="btn btn-primary btn-lg btn-block">Button 1</button>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="center_home_1i1 clearfix">
+				<button class="btn btn-secondary btn-lg btn-block">Button 2</button>
+			</div>
+		</div>
+	</div>
      </select>
 	  </div>
 	 </div>
@@ -136,70 +127,72 @@
 	    <h5 class="mgt text-center"><a class="button_1 block mgt" href="#">Search Result</a></h5>
 	  </div>
 	 </div>
-	</div>
+	</div> -->
+
+
    </div>
   </div>
  </div>
 </div>
-</section>
+</section> 
 
 <section id="popular">
  <div class="container">
   <div class="row">
    <div class="popular_1 text-center clearfix">
     <div class="col-sm-12">
-	 <h1 class="mgt">New & Top Rated Property</h1>
-	 <p>Find new & top rated property for you.</p>
+	 <h1 class="mgt">What is CoLive</h1>
+	 <p>Welcome to our website, your ultimate platform for finding and sharing accommodations! Whether you're searching for a cozy room, a spacious house, or a friendly hostel, we've got you covered. Our user-friendly interface connects renters with accommodating owners, making the process seamless and stress-free. Find your perfect match or share your space with ease on our inclusive platform.</p>
 	</div>
    </div>
    <div class="popular_2 clearfix">
     <div class="col-sm-4">
      <div class="popular_2i clearfix">
 	   <div class="popular_2i1 clearfix">
-	    <a href="#"><img src="./assets/img/2.jpg" class="iw" alt="abc"></a>
+	    <a href="#"><img src="./assets/img/z.png" class="iw" alt="abc"></a>
 	   </div>
-	   <div class="popular_2i2 clearfix">
+	   <!-- <div class="popular_2i2 clearfix">
 	    <h5 class="mgt"><a href="#">FOR RENT</a></h5>
-	   </div>
+	   </div> -->
 	 </div>
-	 <div class="popular_2i3 clearfix">
+	 <!-- <div class="popular_2i3 clearfix">
 	    <h5 class="mgt"><a href="#">Energy Certificate For EU <i class="fa fa-check-square col_1"></i></a></h5>
 		<h4 class="col_1">$13,599 / <span class="col_2">Month</span></h4>
 		<h6><i class="fa fa-hotel col_2"></i> 3 Beds <span><i class="fa fa-home col_2"></i> 2 Bath</span></h6>
-	   </div>
+	   </div> -->
 	</div>
 	<div class="col-sm-4">
      <div class="popular_2i clearfix">
 	   <div class="popular_2i1 clearfix">
-	    <a href="#"><img src="./assets/img/3.jpg" class="iw" alt="abc"></a>
+	    <a href="#"><img src="./assets/img/a.png" class="iw" alt="abc"></a>
 	   </div>
-	   <div class="popular_2i2 clearfix">
+	   <!-- <div class="popular_2i2 clearfix">
 	    <h5 class="mgt"><a href="#">FOR SALE</a></h5>
-	   </div>
+	   </div> -->
 	 </div>
-	 <div class="popular_2i3 clearfix">
+	 <!-- <div class="popular_2i3 clearfix">
 	    <h5 class="mgt"><a href="#">Modern Family Home <i class="fa fa-check-square col_1"></i></a></h5>
 		<h4 class="col_1">$11,550 / <span class="col_2">Month</span></h4>
 		<h6><i class="fa fa-hotel col_2"></i> 3 Beds <span><i class="fa fa-home col_2"></i> 2 Bath</span></h6>
-	   </div>
+	   </div> -->
 	</div>
 	<div class="col-sm-4">
      <div class="popular_2i clearfix">
 	   <div class="popular_2i1 clearfix">
-	    <a href="#"><img src="./assets/img/4.jpg" class="iw" alt="abc"></a>
+	    <a href="#"><img src="./assets/img/b.png" class="iw" alt="abc"></a>
 	   </div>
-	   <div class="popular_2i2 clearfix">
+	   <!-- <div class="popular_2i2 clearfix">
 	    <h5 class="mgt"><a href="#">FOR RENT</a></h5>
-	   </div>
+	   </div> -->
 	 </div>
-	 <div class="popular_2i3 clearfix">
+	 <!-- <div class="popular_2i3 clearfix">
 	    <h5 class="mgt"><a href="#">Real Luxury Villa <i class="fa fa-check-square col_1"></i></a></h5>
 		<h4 class="col_1">$10,599 / <span class="col_2">Month</span></h4>
 		<h6><i class="fa fa-hotel col_2"></i> 3 Beds <span><i class="fa fa-home col_2"></i> 2 Bath</span></h6>
-	   </div>
+	   </div> -->
 	</div>
    </div>
-   <div class="popular_2 clearfix">
+   <!-- <div class="popular_2 clearfix">
     <div class="col-sm-4">
      <div class="popular_2i clearfix">
 	   <div class="popular_2i1 clearfix">
@@ -245,7 +238,7 @@
 		<h6><i class="fa fa-hotel col_2"></i> 3 Beds <span><i class="fa fa-home col_2"></i> 2 Bath</span></h6>
 	   </div>
 	</div>
-   </div>
+   </div> -->
   </div>
  </div>
 </section>
@@ -255,7 +248,7 @@
   <div class="row">
    <div class="popular_1 text-center clearfix">
     <div class="col-sm-12">
-	 <h1 class="mgt">Most Popular Locations</h1>
+	 <h1 class="mgt">You Can Find Places From Below Places</h1>
 	 <p>Top & perfect 450+ location property.</p>
 	</div>
    </div>
@@ -263,21 +256,21 @@
     <div class="col-sm-4">
 	 <div class="location_1i clearfix">
 	  <div class="location_1i1 clearfix">
-	   <a href="#"><img src="./assets/img/8.jpg" class="iw" alt="abc"></a>
+	   <a href="#"><img src="./assets/img/srilanka.png" class="iw" alt="abc"></a>
 	  </div>
 	  <div class="location_1i2 text-center clearfix">
-	   <h4 class="mgt"><a class="col" href="#">New York City</a></h4>
-	   <h5><a class="col" href="#">213 Properties</a></h5>
+	   <h4 class="mgt"><a class="col" href="#">Sri Lanka</a></h4>
+	   <h5><a class="col" href="#">400 Properties</a></h5>
 	  </div>
 	 </div>
 	</div>
 	<div class="col-sm-8">
 	 <div class="location_1i clearfix">
 	  <div class="location_1i1 clearfix">
-	   <a href="#"><img src="./assets/img/9.jpg" class="iw" alt="abc"></a>
+	   <a href="#"><img src="./assets/img/India.png" class="iw" alt="abc"></a>
 	  </div>
 	  <div class="location_1i2 text-center clearfix">
-	   <h4 class="mgt"><a class="col" href="#">Los Angeles</a></h4>
+	   <h4 class="mgt"><a class="col" href="#">India</a></h4>
 	   <h5><a class="col" href="#">283 Properties</a></h5>
 	  </div>
 	 </div>
@@ -287,10 +280,10 @@
     <div class="col-sm-4">
 	 <div class="location_1i clearfix">
 	  <div class="location_1i1 clearfix">
-	   <a href="#"><img src="./assets/img/10.jpg" class="iw" alt="abc"></a>
+	   <a href="#"><img src="./assets/img/Untitled-2.png" class="iw" alt="abc"></a>
 	  </div>
 	  <div class="location_1i2 text-center clearfix">
-	   <h4 class="mgt"><a class="col" href="#">America</a></h4>
+	   <h4 class="mgt"><a class="col" href="#">New York</a></h4>
 	   <h5><a class="col" href="#">477 Properties</a></h5>
 	  </div>
 	 </div>
@@ -298,10 +291,10 @@
 	<div class="col-sm-4">
 	 <div class="location_1i clearfix">
 	  <div class="location_1i1 clearfix">
-	   <a href="#"><img src="./assets/img/11.jpg" class="iw" alt="abc"></a>
+	   <a href="#"><img src="./assets/img/canada.png" class="iw" alt="abc"></a>
 	  </div>
 	  <div class="location_1i2 text-center clearfix">
-	   <h4 class="mgt"><a class="col" href="#">London</a></h4>
+	   <h4 class="mgt"><a class="col" href="#">Canada</a></h4>
 	   <h5><a class="col" href="#">353 Properties</a></h5>
 	  </div>
 	 </div>
@@ -309,10 +302,10 @@
 	<div class="col-sm-4">
 	 <div class="location_1i clearfix">
 	  <div class="location_1i1 clearfix">
-	   <a href="#"><img src="./assets/img/12.jpg" class="iw" alt="abc"></a>
+	   <a href="#"><img src="./assets/img/englandpng.png" class="iw" alt="abc"></a>
 	  </div>
 	  <div class="location_1i2 text-center clearfix">
-	   <h4 class="mgt"><a class="col" href="#">United States</a></h4>
+	   <h4 class="mgt"><a class="col" href="#">England</a></h4>
 	   <h5><a class="col" href="#">323 Properties</a></h5>
 	  </div>
 	 </div>
@@ -341,36 +334,36 @@
                 <div class="item active">
 				 <div class="col-sm-6 space_left">
 				  <div class="client_1ri clearfix">
-				    <img src="./assets/img/13.jpg" class="img-circle" alt="abc">
+				    <img src="./assets/img/person.png" class="img-circle" alt="abc">
 					<h5 class="mgt col_1"> Eget Nulla</h5>
 					<h6>Google Of Teacher</h6>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ante dapibus diam. Nulla quis sem at nibh elementum imperdiet. Fusce nec tellus sed augue semper porta. Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent per conubia nostra. </p>
+					<p>Exceptional experience! My stay at this coliving space was fantastic. From the modern amenities to the vibrant community atmosphere, it truly felt like a home away from home. Highly recommend for anyone looking for a blend of comfort and social connection. </p>
 				  </div>
 				  </div>
                  <div class="col-sm-6 space_left">
 				  <div class="client_1ri clearfix">
-				    <img src="./assets/img/14.jpg" class="img-circle" alt="abc">
+				    <img src="./assets/img/person2.png" class="img-circle" alt="abc">
 					<h5 class="mgt col_1"> Sed Cursus</h5>
-					<h6>Founder</h6>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ante dapibus diam. Nulla quis sem at nibh elementum imperdiet. Fusce nec tellus sed augue semper porta. Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent per conubia nostra. </p>
+					<h6>Officer</h6>
+					<p>Top-notch coliving concept! The website accurately reflects the innovative approach to shared living. Clean design, intuitive navigation, and detailed information make it easy for potential residents to envision themselves in this dynamic community. Kudos to the team behind it! </p>
 				  </div>
 				  </div>
                 </div>
                 <div class="item">
                   <div class="col-sm-6 space_left">
 				  <div class="client_1ri clearfix">
-				    <img src="./assets/img/15.jpg" class="img-circle" alt="abc">
+				    <img src="./assets/img/person3.png" class="img-circle" alt="abc">
 					<h5 class="mgt col_1"> Ante Dapibus</h5>
 					<h6>Google Of Teacher</h6>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ante dapibus diam. Nulla quis sem at nibh elementum imperdiet. Fusce nec tellus sed augue semper porta. Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent per conubia nostra. </p>
+					<p>Top-notch coliving concept! The website accurately reflects the innovative approach to shared living. Clean design, intuitive navigation, and detailed information make it easy for potential residents to envision themselves in this dynamic community. Kudos to the team behind it! </p>
 				  </div>
 				  </div>
                   <div class="col-sm-6 space_left">
 				  <div class="client_1ri clearfix">
-				    <img src="./assets/img/16.jpg" class="img-circle" alt="abc">
+				    <img src="./assets/img/person2.png" class="img-circle" alt="abc">
 					<h5 class="mgt col_1"> Nulla Quis</h5>
-					<h6>Founder</h6>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ante dapibus diam. Nulla quis sem at nibh elementum imperdiet. Fusce nec tellus sed augue semper porta. Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent per conubia nostra. </p>
+					<h6>Digital Creator</h6>
+					<p>A refreshing take on modern living! This coliving website stands out with its emphasis on fostering a sense of belonging and collaboration among residents. The testimonials and virtual tours provide a genuine glimpse into the lifestyle, making it a compelling choice for those seeking more than just a place to stay. </p>
 				  </div>
 				  </div>
                 </div>
@@ -383,7 +376,7 @@
  </div>
 </section>
 
-<section id="price">
+<!-- <section id="price">
  <div class="container">
   <div class="row">
     <div class="popular_1 text-center clearfix">
@@ -447,7 +440,7 @@
    </div>
   </div>
  </div>
-</section>
+</section> -->
 
 <section id="places">
  <div class="places_m clearfix">
@@ -455,8 +448,8 @@
   <div class="row">
    <div class="places_1 text-center clearfix">
     <div class="col-sm-12">
-	 <h1 class="mgt col">Are You Searching Top Places</h1>
-	 <p class="col">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitursodales ligula in libero.</p>
+	 <h1 class="mgt col">Are You Searching Recommended Places</h1>
+	 <p class="col">Discover the best accommodations tailored to your needs on our site! From charming apartments to luxurious villas, we handpick the finest options for your comfort and convenience. Explore a curated selection of top-rated stays, ensuring every journey is filled with comfort and memorable experiences. Start your search now and find your perfect home away from home!</p>
 	 <h5><a class="button_1" href="#">Browse Top Property Places</a></h5>
 	</div>
    </div>
@@ -499,8 +492,8 @@
 	   </div>
 	  </div>
 	  <div class="work_h_1i1 text-center clearfix">
-	   <h4>Find & Search Property</h4>
-	   <p>There are many variations of passages of Lorem Ipsum available, but the majority have Ipsum available.</p>
+	   <h4>AI Matching for User</h4>
+	   <p>There are many variations of Users use Co LIve. You can Match Your </p>
 	  </div>
 	 </div>
 	 <div class="col-sm-4">
@@ -527,11 +520,11 @@
   <div class="row">
    <div class="popular_1 text-center clearfix">
     <div class="col-sm-12">
-	 <h1 class="mgt"> Most Popular Agent</h1>
-	 <p>Find new & most popular property for you.</p>
+	 <h1 class="mgt">Why Co Live</h1>
+	 <p>make urban living more accessible, affordable</p>
 	</div>
    </div>
-   <div class="agent_h_1 clearfix">
+   <!-- <div class="agent_h_1 clearfix">
     <div class="col-sm-4">
 	 <div class="agent_h_1i text-center clearfix">
 	  <span class="text-left span_1">
@@ -582,7 +575,7 @@
 	  <a href="#"><i class="fa fa-bookmark-o"></i></a>
 	  <a class="col_5 pull-right" href="#"><i class="fa fa-phone"></i></a>
 	  </span>
-	  <img src=".assets/img/16.jpg" class="img-circle" alt="abc">
+	  <img src="./assets/img/16.jpg" class="img-circle" alt="abc">
 	  <h4><a href="#">Ante Dapibus</a></h4>
 	  <h6 class="mgt"><i class="fa fa-map-marker"></i> 2589 Lorem Lane</h6>
 	  <span>
@@ -598,7 +591,9 @@
 	  <h5><a class="button block" href="#">View Profile <i class="fa fa-long-arrow-right"></i></a></h5>
 	 </div>
 	</div>
-   </div>
+   </div> -->
+   <P>“CoLive” facilitates the sharing of houses, apartments, or lodgings seamlessly. If someone is open to sharing their residence, they can easily register on our platform. Simultaneously, individuals in search of a place to live can effortlessly find available residences or potential partners for shared living arrangements. This user-friendly interface ensures a smooth and efficient process for those seeking shared housing solutions, making urban living more accessible, affordable, and socially connected through “CoLive”.
+</P>
   </div>
  </div>
 </section>
@@ -652,7 +647,9 @@
     <div class="col-sm-3">
 	 <div class="footer_1i1 clearfix">
 	  <h4 class="mgt col">About Us</h4>
-	  <p class="col_2">This My Template is a team of young professionals that has been successfully creating Creative Website templates already for several years.</p>
+	  <p class="col_2">We're More Than Just a Place to Stay
+		We're Your Second Home
+		Away From Your Home.</p>
 	  <h5><a class="button col_2" href="#"><i class="fa fa-android"></i> Google Store</a></h5>
 	 </div>
 	</div>
@@ -671,8 +668,8 @@
 	<div class="col-sm-3">
 	 <div class="footer_1i1 clearfix">
 	  <h4 class="mgt col">Get In Touch</h4>
-	  <h6 class="col_2"><i class="fa fa-map-marker"></i> 65 North Park Avenue, USA</h6>
-	  <h6 class="col_2"><i class="fa fa-envelope"></i> <a class="col_2" href="#">infogmail.com</a></h6>
+	  <h6 class="col_2"><i class="fa fa-map-marker"></i> Pabahinna, Rathnapura,Sri Lanka</h6>
+	  <h6 class="col_2"><i class="fa fa-envelope"></i> <a class="col_2" href="#">g-15&#64;gmail.com</a></h6>
 	  <h6 class="col_2"><i class="fa fa-phone"></i> +91 123 456 7890</h6>
 	  <h6 class="col_2"><i class="fa fa-fax"></i> +91 123 456 7890</h6>
 	  <h6 class="col_2"><i class="fa fa-globe"></i> All Country Realhome</h6>
@@ -681,7 +678,7 @@
 	<div class="col-sm-3">
 	 <div class="footer_1i1 clearfix">
 	  <h4 class="mgt col">Follow Us</h4>
-      <p class="col_2">Follow & Subscribe your email to get new business tips.</p>
+      <p class="col_2">Follow & Subscribe Us To Get More Details.</p>
 	  <ul class="social-network social-circle">
                         <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
                         <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
@@ -695,7 +692,7 @@
    </div>
    <div class="footer_2 text-center clearfix">
 	 <div class="col-sm-12">
-	  <p class="col_2 mgt">© 2024 CoLive. All Rights Reserved | Design by TeamX <a class="col_1" href="http://www.templateonweb.com"></a>G-15</p>
+	  <p class="col_2 mgt">© 2024 CoLive. All Rights Reserved | Design by TeamX <a class="col_1" ></a>G-15</p>
 	 </div>
    </div>
   </div>
@@ -704,3 +701,4 @@
 
 <script src="js/classie.js"></script>
 <script src="js/cbpAnimatedHeader.js"></script>
+
