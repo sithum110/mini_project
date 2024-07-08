@@ -1,4 +1,4 @@
-<body>
+
     <section id="header">
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -74,50 +74,51 @@
       </div>
      </div>
     </section>
-    
     <section id="signup">
-        <div class="container clearfix">
-          <div class="row">
-            <div class="signup_1 clearfix">
-              <div class="account-box">
-                <form class="form-signup" action="your_signup_action_url_here" method="POST">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Full Name" required autofocus>
+      <div class="container clearfix">
+        <div class="row">
+          <div class="signup_1 clearfix">
+            <div class="account-box">
+              <div class="form-signup"  >
+                <div class="form-group">
+                  <input type="text" [attr.value]="fullName" class="form-control" placeholder="Full Name"   name="fullName" required autofocus>
+                </div>
+                <div class="form-group">
+                  <input (change)="onEditEmail($event)" type="email" class="form-control" placeholder="Email"  name="email" required>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password"  name="password" required>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Confirm Password"  name="confirmPassword" required>
+                </div>
+                <button class="btn btn-lg btn-block purple-bg"  (click)="onSubmit()">Sign Up</button>
+              </div>
+              <p>{{message}}</p>
+              <div class="or-box">
+                <span class="or">OR</span>
+                <div class="row">
+                  <div class="col-md-6 row-block">
+                    <a href="#" class="btn btn-facebook btn-block">Sign Up with Facebook</a>
                   </div>
-                  <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Email" required>
-                  </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Password" required>
-                  </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Confirm Password" required>
-                  </div>
-                  <button class="btn btn-lg btn-block purple-bg" type="submit">Sign Up</button>
-                </form>
-                <div class="or-box">
-                  <span class="or">OR</span>
-                  <div class="row">
-                    <div class="col-md-6 row-block">
-                      <a href="#" class="btn btn-facebook btn-block">Sign Up with Facebook</a>
-                    </div>
-                    <div class="col-md-6 row-block">
-                      <a href="#" class="btn btn-google btn-block">Sign Up with Google</a>
-                    </div>
+                  <div class="col-md-6 row-block">
+                    <a href="#" class="btn btn-google btn-block">Sign Up with Google</a>
                   </div>
                 </div>
-                <div class="or-box row-block">
-                  <div class="row">
-                    <div class="col-md-12 row-block">
-                      <a href="#" class="tag_menu" routerLink="/signin" routerLinkActive="active" ariaCurrentWhenActive="page" class="btn btn-primary btn-block">Already have an account? Sign In</a>
-                    </div>
+              </div>
+              <div class="or-box row-block">
+                <div class="row">
+                  <div class="col-md-12 row-block">
+                    <a href="#" class="tag_menu" routerLink="/signin" routerLinkActive="active" ariaCurrentWhenActive="page" class="btn btn-primary btn-block">Already have an account? Sign In</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+    
       
     
       <section id="footer">
@@ -179,7 +180,6 @@
         </div>
        </section>
     
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
     
-    </body>
+    
+   
