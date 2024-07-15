@@ -25,13 +25,16 @@
               "src/assets"
             ],
             "styles": [
+              
               "src/styles.css"
+              
             ],
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
               "entry": "server.ts"
+              
             }
           },
           "configurations": {

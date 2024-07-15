@@ -1,13 +1,35 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {RouterLink, RouterLinkActive} from '@angular/router';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterOutlet,RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, FormsModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  email: string = '';
+  password: string = '';
 
+  constructor(private authService: AuthService, private router: Router) {}
+
+  onSubmit() {
+    this.authService.login(this.email, this.password).subscribe(
+      response => {
+        console.log('User logged in', response);
+        alert('Login successful!');
+        this.router.navigate(['/home']);
+      },
+      error => {
+        console.error('Error logging in', error);
+        alert('user not found');
+      }
+    );
+  }
 }
+
