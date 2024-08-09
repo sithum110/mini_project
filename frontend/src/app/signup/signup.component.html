@@ -1,0 +1,41 @@
+
+    
+    <section id="center" class="clearfix center_about">
+     <div class="container clearfix">
+      <div class="row">
+       <div class="center_about_1 text-center clearfix">
+        <div class="col-sm-12">
+         <h1 class="mgt">Sign Up</h1>
+         <p>Find your best place to stay with Co Live</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+
+    <section id="signup">
+      <div class="container clearfix">
+        <div class="row">
+          <div class="signup_1 clearfix">
+            <div class="account-box">
+              <form class="form-signup" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Username" [(ngModel)]="username" name="username" required autofocus>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Email" [(ngModel)]="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password" name="password" required>
+                </div>
+                <button class="btn btn-lg btn-block purple-bg" type="submit">Sign Up</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+      
+    
+      

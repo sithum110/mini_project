@@ -1,0 +1,104 @@
+.center_about{
+    margin-top:80px; 
+    padding-top:80px;
+    padding-bottom:80px; 
+    background: #03a9f414;
+     }
+    .blog_detail_l3{
+    padding:30px 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+     }
+    .blog_detail_l3i .form-control{
+    height:50px;
+    font-size:18px;
+    margin-top:20px;
+    border-radius:0; 
+     }
+    .blog_detail_l3i .form_1{
+    height:150px;
+     }
+    .mission_1ri span i{
+    font-size:40px; 
+     }
+    .mission_1ri{
+    margin-top:30px; 
+     }
+    .mission_1ri p{
+    margin-top:10px; 
+     }
+    .contact_2{
+    margin-top:30px; 
+     }
+    #contact{
+    padding-top:50px;
+    padding-bottom:50px; 
+     }
+     .blue-bg {
+        background-color: lightskyblue;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      
+      .blue-bg:hover {
+        background-color: darkblue;
+      }
+      
+      .btn {
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: .375rem .75rem;
+        font-size: 18px;
+        line-height: 1.5;
+        border-radius: .25rem;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+      }
+      
+      .btn-lg {
+        padding: .5rem 1rem;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        border-radius: .3rem;
+      }
+      
+      .btn-block {
+        display: block;
+        width: 100%;
+        padding-top: 10px;
+        margin-top: 20px;
+      }
+      
+    /*********************contact_end****************/
+    
+    
+    
+    @media screen and (max-width : 767px){
+    .blog_detail_l3 {
+     text-align:center;
+     margin-bottom:20px;
+     }
+    .contact_1r {
+     text-align:center; 
+     }
+    }
+    
+    @media (min-width:768px) and (max-width:991px) {
+    .mission_1ri span i{
+    font-size:30px; 
+     }
+     }
+    @media (min-width:992px) and (max-width:1200px) {
+    .mission_1ri span i{
+    font-size:30px; 
+     }
+     }
+    @media (min-width:1201px) and (max-width:1350px) {
+    
+     }

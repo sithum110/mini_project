@@ -1,0 +1,61 @@
+<body>
+
+    
+    <section id="center" class="clearfix center_about">
+     <div class="container clearfix">
+      <div class="row">
+       <div class="center_about_1 text-center clearfix">
+        <div class="col-sm-12">
+         <h1 class="mgt">Log In</h1>
+         <p>Find new & top rated property for you.</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    
+    <section id="login">
+      <div class="container clearfix">
+        <div class="row">
+          <div class="login_1 clearfix">
+            <div class="account-box">
+              <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Email" [(ngModel)]="email" name="email" required autofocus>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password" name="password" required>
+                </div>
+                <label class="checkbox">
+                  <input type="checkbox" value="remember-me">
+                  Keep me signed in
+                </label>
+                <button class="btn btn-lg btn-block purple-bg" type="submit">
+                  Sign in
+                </button>
+              </form>
+              <a class="forgotLnk" href="#">I can't access my account</a>
+              <div class="or-box">
+                <span class="or">OR</span>
+                <div class="row">
+                  <div class="col-md-6 row-block">
+                    <a href="#" class="btn btn-facebook btn-block">Facebook</a>
+                  </div>
+                  <div class="col-md-6 row-block">
+                    <a href="#" class="btn btn-google btn-block">Google</a>
+                  </div>
+                </div>
+              </div>
+              <div class="or-box row-block">
+                <div class="row">
+                  <div class="col-md-12 row-block">
+                    <a class="tag_menu btn btn-primary btn-block" routerLink="/signup" routerLinkActive="active" ariaCurrentWhenActive="page">Create New Account</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    

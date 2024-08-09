@@ -1,0 +1,44 @@
+.main_button {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    flex-wrap: wrap; /* Allows the buttons to wrap to the next line on smaller screens */
+  }
+  
+  .main_button ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .main_button li {
+    margin: 10px; /* Adjust spacing between buttons */
+  }
+  
+  .button_1 a {
+    display: block;
+    padding: 10px 20px; /* Adjust padding for button size */
+    text-align: center;
+    text-decoration: none;
+    background-color:  #0056b3; /* Adjust button background color */
+    color: white; /* Adjust button text color */
+    border-radius: 5px; /* Adjust border radius for rounded corners */
+  }
+  
+  .button_1 a:hover {
+    background-color: #0056b3; /* Adjust hover background color */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .main_button ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .main_button li {
+      width: 100%;
+      margin: 5px 0; /* Adjust margin for buttons */
+    }
+  }
+  
