@@ -1,13 +1,15 @@
 .center_about{
-    margin-top:80px; 
-    padding-top:80px;
-    padding-bottom:80px; 
-    background: #03a9f414;
+    margin-top:100px; 
+    padding-top:100px;
+    padding-bottom:100px; 
+    background-image: url("https://img.freepik.com/free-photo/3d-view-house-model_23-2150761170.jpg?t=st=1722489587~exp=1722493187~hmac=4aad883882a9cae63f6c8c13ec8fb61284976d6455a7f927ed870b41c0207bd9&w=740");
+    background-repeat: no-repeat;
+ 
      }
     #prop{
     padding-top:50px;
     padding-bottom:50px; 
-    background:#fafafa;
+    background:#f1f2f3;
      }
     .submit_1 hr{
     border-color:#eee; 
