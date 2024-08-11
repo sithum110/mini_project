@@ -23,7 +23,16 @@ export class LoginComponent {
       response => {
         console.log('User logged in', response);
         alert('Login successful!');
-        this.router.navigate(['/home']);
+        
+        const userRole = response.role;
+
+        if(userRole === 'owner'){
+          this.router.navigate(['/owner']);
+        } else if(userRole === 'renter'){
+          this.router.navigate(['/renter']);
+        }else {
+          this.router.navigate(['/home']);
+        }
       },
       error => {
         console.error('Error logging in', error);

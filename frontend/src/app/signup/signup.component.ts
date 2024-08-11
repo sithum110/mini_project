@@ -15,11 +15,13 @@ export class SignupComponent {
   username: string = '';
   email: string = '';
   password: string = '';
+  role: string = '';
+  
 
   constructor(private http: HttpClient,private router: Router) {}
 
   onSubmit() {
-    const user = { username: this.username, email: this.email, password: this.password };
+    const user = { username: this.username, email: this.email, password: this.password, role: this.role };
     this.http.post('http://localhost:3000/api/signup', user)
       .subscribe(response => {
         console.log('User signed up', response);
