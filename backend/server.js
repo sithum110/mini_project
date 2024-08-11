@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/signup_DB', {
+mongoose.connect('mongodb://localhost:27017/colive', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
