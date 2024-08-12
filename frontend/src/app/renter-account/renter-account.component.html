@@ -1,0 +1,38 @@
+<section id="container">
+<h2>Renter Account</h2>
+
+<form (ngSubmit)="onSubmit()">
+  <fieldset>
+    <legend>Personal Details</legend>
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" [(ngModel)]="renter.fullName" name="fullName" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="renter.email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" [(ngModel)]="renter.phone" name="phone" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Preferences</legend>
+    <label for="locationPreference">Preferred Location:</label>
+    <input type="text" id="locationPreference" [(ngModel)]="renter.locationPreference" name="locationPreference">
+
+    <label for="roommatePreference">Roommate Preference:</label>
+    <input type="text" id="roommatePreference" [(ngModel)]="renter.roommatePreference" name="roommatePreference">
+
+    <label for="lifestylePreference">Lifestyle Preference:</label>
+    <input type="text" id="lifestylePreference" [(ngModel)]="renter.lifestylePreference" name="lifestylePreference">
+  </fieldset>
+
+  <fieldset>
+    <legend>Account Settings</legend>
+    <button type="button" (click)="updateDetails()">Update Details</button>
+    <button type="button" (click)="deleteAccount()">Delete Account</button>
+  </fieldset>
+
+  <button type="submit">Save Changes</button>
+</form>
+</section>
+

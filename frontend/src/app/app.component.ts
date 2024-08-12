@@ -19,7 +19,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,RouterLink, RouterLinkActive,HomeComponent,AboutComponent,BlogComponent,AgencyComponent,AgentComponent,BlogDetailComponent,ContactComponent,DetailComponent,ListComponent,LoginComponent,PropertyComponent,SignupComponent,RouterModule,NavbarComponent,FooterComponent],
+  imports: [RouterOutlet,RouterLink, RouterLinkActive,HomeComponent,AboutComponent,BlogComponent,AgencyComponent,AgentComponent,BlogDetailComponent,ContactComponent,DetailComponent,ListComponent,LoginComponent,PropertyComponent,SignupComponent,RouterModule,NavbarComponent,FooterComponent,RentersComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
