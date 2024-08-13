@@ -14,6 +14,9 @@ import { SignupComponent } from './signup/signup.component';
 import { provideRouter } from '@angular/router';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { RentersComponent} from './renters/renters.component';
+import { ForumComponent } from './forum/forum.component';
+
 
 export const routes: Routes = [
 {path:'' ,component:HomeComponent,title:'home apge' },
@@ -32,7 +35,9 @@ export const routes: Routes = [
   {path:'Navbar' ,component:NavbarComponent,title:'navbar page' },
 {path:'footer' ,component:FooterComponent,title:'footer page' },
 { path: '', redirectTo: '/login', pathMatch: 'full' },
-{path:'home' ,component:HomeComponent,title:'home apge' }
+{path:'home' ,component:HomeComponent,title:'home apge' },
+{path:'renters' ,component:RentersComponent,title:'renters page' },
+{path:'forum' ,component:ForumComponent,title:'forum page' }
   
  
 ];
