@@ -14,7 +14,6 @@ const PORT = 3000;
 app.use(bodyParser.json());
 app.use(cors());
 
-// MongoDB connection
 mongoose.connect('mongodb://127.0.0.1:27017/signup_DB', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
