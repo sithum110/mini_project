@@ -8,6 +8,7 @@ const contactRoutes = require('./routes/contact.routes');
 const detailRoutes = require('./routes/detail.routes');
 const propertyRoutes = require('./routes/property.routes');
 
+
 const app = express();
 const PORT = 3000;
 
