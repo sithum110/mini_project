@@ -1,38 +1,126 @@
-<section id="container">
-<h2>Renter Account</h2>
-
-<form (ngSubmit)="onSubmit()">
-  <fieldset>
-    <legend>Personal Details</legend>
-    <label for="fullName">Full Name:</label>
-    <input type="text" id="fullName" [(ngModel)]="renter.fullName" name="fullName" required>
-    
-    <label for="email">Email:</label>
-    <input type="email" id="email" [(ngModel)]="renter.email" name="email" required>
-
-    <label for="phone">Phone Number:</label>
-    <input type="text" id="phone" [(ngModel)]="renter.phone" name="phone" required>
-  </fieldset>
-
-  <fieldset>
-    <legend>Preferences</legend>
-    <label for="locationPreference">Preferred Location:</label>
-    <input type="text" id="locationPreference" [(ngModel)]="renter.locationPreference" name="locationPreference">
-
-    <label for="roommatePreference">Roommate Preference:</label>
-    <input type="text" id="roommatePreference" [(ngModel)]="renter.roommatePreference" name="roommatePreference">
-
-    <label for="lifestylePreference">Lifestyle Preference:</label>
-    <input type="text" id="lifestylePreference" [(ngModel)]="renter.lifestylePreference" name="lifestylePreference">
-  </fieldset>
-
-  <fieldset>
-    <legend>Account Settings</legend>
-    <button type="button" (click)="updateDetails()">Update Details</button>
-    <button type="button" (click)="deleteAccount()">Delete Account</button>
-  </fieldset>
-
-  <button type="submit">Save Changes</button>
-</form>
+<section id="center" class="clearfix center_about">
+  <div class="container clearfix">
+    <div class="row">
+      <div class="center_about_1 text-center clearfix">
+        <div class="col-sm-12">
+          <h1 class="mgt">Your Account</h1>
+          <p>Manage your details and preferences below.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
+<section id="account-details">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h2>Your Details</h2>
+        <form (ngSubmit)="updateUserDetails()" #detailsForm="ngForm">
+          <div class="details_box">
+            <h4>Personal Details</h4><br>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name" [(ngModel)]="user.name" placeholder="Enter your Name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" placeholder="Enter your Email" disabled>
+            </div>
+            <div class="form-group">
+              <label>Gender</label>
+              <div class="radio">
+                <label><input type="radio" name="gender" [(ngModel)]="user.gender" value="Female">Female</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="gender" [(ngModel)]="user.gender" value="Male">Male</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="gender" [(ngModel)]="user.gender" value="Other">Other</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="birthDay">Birth Day</label>
+              <input type="date" class="form-control" id="birthDay" name="birthDay" [(ngModel)]="user.birthDay" placeholder="Enter your birthday">
+            </div>
+            <div class="form-group">
+              <label for="budget">Monthly Budget (in USD):</label>
+              <input type="number" class="form-control" id="budget" name="budget" [(ngModel)]="preferences.budget" placeholder="Enter monthly budget">
+            </div>
+          </div>
+
+          <div class="details_box">
+            <h4>Living Preferences</h4><br>
+            <div class="form-group">
+              <label for="location">Preferred Location:</label>
+              <input type="text" class="form-control" id="location" name="location" [(ngModel)]="preferences.location" placeholder="Enter preferred location">
+            </div>
+            <div class="form-group">
+              <label>Type of co-living space:</label><br>
+              <input type="checkbox" id="apartment" name="apartment" [(ngModel)]="preferences.apartment" value="true">&nbsp;
+              <label for="apartment">Apartment</label><br>
+              <input type="checkbox" id="house" name="house" [(ngModel)]="preferences.house" value="true">&nbsp;
+              <label for="house">House</label><br>
+            </div>
+            <div class="form-group">
+              <label for="amenities">Preferred Amenities:</label>
+              <input type="text" class="form-control" id="amenities" name="amenities" [(ngModel)]="preferences.amenities" placeholder="Enter preferred amenities">
+            </div>
+            <div class="form-group">
+              <label for="lifestyle">Preferred Lifestyle:</label>
+              <textarea class="form-control" id="lifestyle" name="lifestyle" [(ngModel)]="preferences.lifestyle" rows="3" placeholder="Describe your preferred lifestyle"></textarea>
+            </div>
+          </div>
+
+          <div class="details_box">
+            <h4>Roommate Preferences</h4><br>
+            <div class="form-group">
+              <label for="roommatePreferences">Roommate Preferences:</label>
+              <textarea class="form-control" id="roommatePreferences" name="roommatePreferences" [(ngModel)]="preferences.roommatePreferences" rows="3" placeholder="Describe your preferences for roommates (if any)"></textarea>
+            </div>
+          </div>
+
+          <div class="details_box">
+            <h4>Lifestyle and Interests</h4><br>
+            <div class="form-group">
+              <label>Do you prefer a quiet environment?</label>
+              <div class="radio">
+                <label><input type="radio" name="quietEnvironment" [(ngModel)]="preferences.quietEnvironment" value="Yes">Yes</label>
+                <label><input type="radio" name="quietEnvironment" [(ngModel)]="preferences.quietEnvironment" value="No">No</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Do you prefer social gatherings and events?</label>
+              <div class="radio">
+                <label><input type="radio" name="socialGatherings" [(ngModel)]="preferences.socialGatherings" value="Yes">Yes</label>
+                <label><input type="radio" name="socialGatherings" [(ngModel)]="preferences.socialGatherings" value="No">No</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Do you have any dietary restrictions?</label>
+              <div class="radio">
+                <label><input type="radio" name="dietaryRestrictions" [(ngModel)]="preferences.dietaryRestrictions" value="Yes">Yes</label>
+                <label><input type="radio" name="dietaryRestrictions" [(ngModel)]="preferences.dietaryRestrictions" value="No">No</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Are you comfortable with pets in the house?</label>
+              <div class="radio">
+                <label><input type="radio" name="petsInHouse" [(ngModel)]="preferences.petsInHouse" value="Yes">Yes</label>
+                <label><input type="radio" name="petsInHouse" [(ngModel)]="preferences.petsInHouse" value="No">No</label>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary submit_button">Update Details</button>
+        </form>
+
+        <hr>
+
+        <button class="btn btn-danger" (click)="deleteUserAccount()">Delete Account</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 
