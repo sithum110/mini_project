@@ -5,12 +5,12 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 router.post('/signup', async (req, res) => {
-  const { username, email, password } = req.body;
+  const { username, email, password,role } = req.body;
 
   // Hash the password
   const hashedPassword = bcrypt.hashSync(password, 8);
 
-  const user = new User({ username, email, password: hashedPassword });
+  const user = new User({ username, email, password: hashedPassword,role});
   try {
     await user.save();
     res.status(201).json({ message: 'User signed up' }); // Return JSON response
@@ -40,7 +40,8 @@ router.post('/login', async (req, res) => {
   }
 
   const token = jwt.sign({ id: user._id }, 'your_secret_key', { expiresIn: '1h' });
-  res.status(200).json({ auth: true, token });
+  res.status(200).json({ auth: true, token, role: user.role  });
 });
+
 
 module.exports = router;

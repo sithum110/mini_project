@@ -54,6 +54,7 @@ export class ForumComponent {
       .subscribe(response => {
         console.log('Questionnaire submitted', response);
         alert('Questionnaire submitted successfully!');
+        this.router.navigate(['./renter-account']);
       }, error => {
         console.error('Error submitting questionnaire', error);
       });
