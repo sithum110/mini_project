@@ -1,103 +1,86 @@
-.center_about{
-    margin-top:80px; 
-    padding-top:80px;
-    padding-bottom:80px; 
-    background: #03a9f414;
-     }
-    #prop{
-    padding-top:50px;
-    padding-bottom:50px; 
-    background:#fafafa;
-     }
-    .submit_1 hr{
-    border-color:#eee; 
-     }
-    .submit_1{
-    background:#fff;
-    padding:40px 40px;
-    margin-top:30px; 
-     }
-    .submit_1 .form-control{
-    margin-top:15px;
-    height:50px;
-    font-size:16px; 
-    border-radius:0;
-     }
-    .submit_1 .form_o{
-    height:150px; 
-     }
-    .submit_1 h5{
-    margin-top:20px;
-     }
-    .submit_1ii .span_1 i{
-    color:#1ABC9C;
-    font-size:60px;
-    display:inline-block;
-     }
-    .submit_1ii h5{
-    color:#1ABC9C;
-     }
-    .submit_1ii{
-    border:2px dashed #1ABC9C;
-    margin-top:30px;
-    text-align:center;
-    padding:60px 60px 70px 60px;
-     }
-    .submit_2{
-    background:#fff;
-    padding:40px 40px;
-    margin-top:30px; 
-     }
-    .submit_2i h5 .span_1{
-     margin-left:5px;
-     }
-    .submit_2i h5 {
-    display:inline-block;
-    margin-left:10px;
-    margin-right:10px;
-    font-size:16px;
-    margin-top:20px;
-     }
-    .submit_2 hr {
-    margin-bottom:0;
-     }
-    .submit_3{
-    margin-top:30px; 
-     }
-    /*********************property_end****************/
-    
-    
-    
-    @media screen and (max-width : 767px){
-    #prop{
-    text-align:center;
-     }
-    .submit_1 h5{
-     margin-top:15px!important;
-     }
-    }
-    
-    @media (min-width:768px) and (max-width:991px) {
-    
-     }
-    @media (min-width:992px) and (max-width:1200px) {
-    
-     }
-    @media (min-width:1201px) and (max-width:1350px) {
-    
-     }
-     .container{
-       margin-top: 50px;
-     }
-     #questionnaireForm{
-        margin-top: 50px;
-     }
-     .details_box{
-      margin-bottom: 50px;
-     }
-     .submit_button{
-      border-radius: 100px;
-      width: 100px;
-      height: 40px;
-      margin-bottom: 50px;
-     }
+.account-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+h3 {
+  margin-top: 20px;
+  color: #555;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  margin-top: 20px;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+  .account-container {
+    padding: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+
+/* Responsive design */
+@media screen and (max-width: 767px) {
+  #renterForm {
+    text-align: center;
+    padding: 20px;
+  }
+
+  #renterForm .form-control {
+    margin-top: 15px !important;
+  }
+}

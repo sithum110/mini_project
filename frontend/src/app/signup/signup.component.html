@@ -27,7 +27,20 @@
                 </div>
                 <div class="form-group">
                   <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password" name="password" required>
+
                 </div>
+                
+                <div class="form-group">
+                  <label>
+                    <input type="radio" name="role" value="owner" [(ngModel)]="role" >owner
+                  </label>
+                  <br>
+                  <label>
+                    <input type="radio" name="role" value="renter" [(ngModel)]="role">renter
+                  </label>
+
+                </div>
+
                 <button class="btn btn-lg btn-block purple-bg" type="submit">Sign Up</button>
               </form>
             </div>
