@@ -18,6 +18,7 @@ app.use(cors());
 mongoose.connect('mongodb://127.0.0.1:27017/signup_DB', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  useFindAndModify: false
 })
 .then(() => console.log('MongoDB connected...'))
 .catch(err => console.error('Connection error:', err));
