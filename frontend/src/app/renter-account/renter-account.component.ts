@@ -19,57 +19,29 @@ export class RenterAccountComponent implements OnInit {
   user: any = {};
   preferences: any = {};
 
-  constructor(private userService: UserService, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
-    this.getUserDetails();
-    this.getUserPreferences();
-  }
-
-  getUserDetails(): void {
-    this.userService.getUserDetails().subscribe(
-      (data: any) => {
-        this.user = data.user;
-      },
-      (error) => {
-        console.error('Error fetching user details', error);
-      }
-    );
-  }
-
-  getUserPreferences(): void {
-    this.userService.getUserPreferences().subscribe(
-      (data: any) => {
-        this.preferences = data.preferences;
-      },
-      (error) => {
-        console.error('Error fetching user preferences', error);
-      }
-    );
+    const email = localStorage.getItem('userEmail'); // Assuming email is stored in local storage after login
+    if (email) {
+      this.http.get(`/api/renters/${email}`).subscribe((data: any) => {
+        this.user = data;
+        this.preferences = data; // Assuming preferences are part of the same data object
+      });
+    } else {
+      this.router.navigate(['/login']);
+    }
   }
 
   updateUserDetails(): void {
-    this.userService.updateUserDetails(this.user).subscribe(
-      (response) => {
-        console.log('User details updated successfully', response);
-        alert('User details updated successfully.');
-      },
-      (error) => {
-        console.error('Error updating user details', error);
-      }
-    );
-  }
-
-  deleteUserAccount(): void {
-    if (confirm('Are you sure you want to delete your account?')) {
-      this.userService.deleteUserAccount().subscribe(
-        (response) => {
-          console.log('Account deleted successfully', response);
-          alert('Account deleted successfully.');
-          this.router.navigate(['/']);
+    const email = localStorage.getItem('userEmail');
+    if (email) {
+      this.http.put(`/api/renters/${email}`, { ...this.user, ...this.preferences }).subscribe(
+        (data: any) => {
+          console.log('Details updated', data);
         },
-        (error) => {
-          console.error('Error deleting account', error);
+        (error: any) => {
+          console.error('Update failed', error);
         }
       );
     }
