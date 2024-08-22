@@ -15,11 +15,13 @@ const PORT = 3000;
 app.use(bodyParser.json());
 app.use(cors());
 
-mongoose.connect('mongodb://localhost:27017/colive', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
+mongoose.connect('mongodb://127.0.0.1:27017/signup_DB')
+  .then(() => {
+    console.log('Connected to MongoDB');
+  })
+  .catch(err => {
+    console.error('Error connecting to MongoDB', err);
+  });
 
 app.use('/api', userRoutes);
 app.use('/api', forumRoutes);
