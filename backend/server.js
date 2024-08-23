@@ -8,6 +8,9 @@ const contactRoutes = require('./routes/contact.routes');
 const detailRoutes = require('./routes/detail.routes');
 const propertyRoutes = require('./routes/property.routes');
 const listRoutes = require('./routes/list.routes');
+const renterRoutes = require('./routes/renter.routes');
+
+
 
 const app = express();
 const PORT = 3000;
@@ -29,6 +32,8 @@ app.use('/api', contactRoutes);
 app.use('/api', detailRoutes);
 app.use('/api', propertyRoutes);
 app.use('/api', listRoutes);
+app.use('/api', renterRoutes);
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

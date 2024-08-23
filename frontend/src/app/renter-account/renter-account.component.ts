@@ -1,77 +1,91 @@
 import { Component, OnInit } from '@angular/core';
-import {  UserService } from '../services/user.service';
-import { HttpClientModule } from '@angular/common/http';
+import { ForumService } from '../services/forum.service'; // Adjust the path as needed
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @Component({
+  standalone: true,
   selector: 'app-renter-account',
-  standalone:true,
-  imports: [HttpClientModule, FormsModule],
   templateUrl: './renter-account.component.html',
   styleUrls: ['./renter-account.component.css'],
+  imports: [CommonModule, FormsModule, HttpClientModule]
   
 })
 export class RenterAccountComponent implements OnInit {
-  user: any = {};
-  preferences: any = {};
+  forumDetails: any;
+  forumId = '66c2e99e16f8383d08e90f37'; // Replace with the actual forum ID you want to fetch
 
-  constructor(private userService: UserService, private router: Router) {}
+  constructor(private forumService: ForumService) {}
 
   ngOnInit(): void {
-    this.getUserDetails();
-    this.getUserPreferences();
+    this.loadForumDetails();
   }
 
-  getUserDetails(): void {
-    this.userService.getUserDetails().subscribe(
-      (data: any) => {
-        this.user = data.user;
+  loadForumDetails(): void {
+    this.forumService.getForumDetails(this.forumId).subscribe(
+      data => {
+        this.forumDetails = data;
+        console.log('Forum details loaded:', this.forumDetails);
       },
-      (error) => {
-        console.error('Error fetching user details', error);
+      error => {
+        console.error('Error loading forum details:', error);
       }
     );
-  }
-
-  getUserPreferences(): void {
-    this.userService.getUserPreferences().subscribe(
-      (data: any) => {
-        this.preferences = data.preferences;
-      },
-      (error) => {
-        console.error('Error fetching user preferences', error);
-      }
-    );
-  }
-
-  updateUserDetails(): void {
-    this.userService.updateUserDetails(this.user).subscribe(
-      (response) => {
-        console.log('User details updated successfully', response);
-        alert('User details updated successfully.');
-      },
-      (error) => {
-        console.error('Error updating user details', error);
-      }
-    );
-  }
-
-  deleteUserAccount(): void {
-    if (confirm('Are you sure you want to delete your account?')) {
-      this.userService.deleteUserAccount().subscribe(
-        (response) => {
-          console.log('Account deleted successfully', response);
-          alert('Account deleted successfully.');
-          this.router.navigate(['/']);
-        },
-        (error) => {
-          console.error('Error deleting account', error);
-        }
-      );
-    }
   }
 }
+
+
+// import { Component, OnInit } from '@angular/core';
+// import { ForumService } from '../services/forum.service'; // Adjust the path as needed
+// import { CommonModule } from '@angular/common';
+// import { FormsModule } from '@angular/forms';
+// import { HttpClientModule } from '@angular/common/http';
+
+// @Component({
+//   standalone: true,
+//   selector: 'app-renter-account',
+//   templateUrl: './renter-account.component.html',
+//   styleUrls: ['./renter-account.component.css'],
+//   imports: [CommonModule, FormsModule, HttpClientModule]
+// })
+// export class RenterAccountComponent implements OnInit {
+//   forumDetails: any;
+//   forumId!: string; // Use the definite assignment assertion
+
+//   constructor(private forumService: ForumService) {}
+
+//   ngOnInit(): void {
+//     this.forumId = this.getCurrentRenterForumId();
+//     if (this.forumId) {
+//       this.loadForumDetails();
+//     } else {
+//       console.error('Forum ID not found.');
+//     }
+//   }
+
+//   getCurrentRenterForumId(): string {
+//     console.log(localStorage.getItem('forumId'));
+//     console.log('hiii');
+
+//     // Example: Retrieve the forum ID from localStorage or a service
+//     return localStorage.getItem('forumId') || ''; // Adjust the key as needed
+//   }
+
+//   loadForumDetails(): void {
+//     this.forumService.getForumDetails(this.forumId).subscribe(
+//       data => {
+//         this.forumDetails = data;
+//         console.log('Forum details loaded:', this.forumDetails);
+//       },
+//       error => {
+//         console.error('Error loading forum details:', error);
+//       }
+//     );
+//   }
+// }
+
+
+
+
