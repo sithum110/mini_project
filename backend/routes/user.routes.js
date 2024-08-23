@@ -45,4 +45,26 @@ router.post('/login', async (req, res) => {
 });
 
 
+
+// router.put('/api/renter/:email', (req, res) => {
+//   const email = req.params.email;
+//   const updatedData = req.body;
+
+//   // Find and update the renter by the decoded email
+//   Renter.findOneAndUpdate({ email: decodeURIComponent(email) }, updatedData, { new: true })
+//     .then(updatedRenter => {
+//       if (!updatedRenter) {
+//         return res.status(404).send('Renter not found');
+//       }
+//       res.json(updatedRenter);
+//     })
+//     .catch(err => {
+//       res.status(500).send(err.message);
+//     });
+// });
+
+
+
+
+
 module.exports = router;

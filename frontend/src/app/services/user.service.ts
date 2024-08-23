@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'http://localhost:3000/api/users'; // Adjust with your actual API URL
+  private apiUrl = 'http://localhost:3000/userapi'; // Adjust with your actual API URL
 
   constructor(private http: HttpClient) {}
 
@@ -25,5 +25,8 @@ export class UserService {
   deleteUserAccount(): Observable<any> {
     return this.http.delete<any>(`${this.apiUrl}/delete`);
   }
-}
 
+  getRenterDetails(email: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/renter/${email}`);
+}
+}
