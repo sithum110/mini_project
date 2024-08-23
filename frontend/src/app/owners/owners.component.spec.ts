@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ListComponent } from './list.component';
 
-describe('ListComponent', () => {
-  let component: ListComponent;
-  let fixture: ComponentFixture<ListComponent>;
+import { OwnersComponent } from './owners.component';
+
+describe('OwnersComponent', () => {
+  let component: OwnersComponent;
+  let fixture: ComponentFixture<OwnersComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ListComponent] // Changed from imports to declarations
+      imports: [OwnersComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ListComponent);
+    fixture = TestBed.createComponent(OwnersComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Detail = require('../models/detail.model');
 
-// Create a new property detail
 router.post('/create', async (req, res) => {
     const { title, description, price, location, bedrooms, bathrooms, garage, area, type, buildYear, amenities, images, agent } = req.body;
 
@@ -15,7 +14,6 @@ router.post('/create', async (req, res) => {
     }
 });
 
-// Get all property details
 router.get('/', async (req, res) => {
     try {
         const details = await Detail.find();
@@ -25,7 +23,6 @@ router.get('/', async (req, res) => {
     }
 });
 
-// Get a specific property detail by ID
 router.get('/:id', async (req, res) => {
     try {
         const detail = await Detail.findById(req.params.id);
@@ -38,7 +35,6 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-// Update a property detail by ID
 router.put('/:id', async (req, res) => {
     try {
         const detail = await Detail.findByIdAndUpdate(req.params.id, req.body, { new: true });
