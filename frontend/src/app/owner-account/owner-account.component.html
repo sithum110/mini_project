@@ -3,44 +3,35 @@
       <div class="row">
         <div class="center_about_1 text-center clearfix">
           <div class="col-sm-12">
-            <h1 class="mgt">Owner Account</h1>
-            <p>Manage your details and preferences below.</p>
+            <h1 class="mgt">Welcome {{ ownerDetails.name }}</h1>
           </div>
         </div>
       </div>
     </div>
   </section>
   
-  <section id="account-details">
+  <section id="questionnaire">
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-          <h2>Your Details</h2>
-          <form (ngSubmit)="updateOwnerDetails()" #ownerDetailsForm="ngForm">
-            <div class="details_box">
-              <h4>Owner Details</h4><br>
-              <div class="form-group">
-                <label for="ownerName">Name</label>
-                <input type="text" class="form-control" id="ownerName" name="ownerName" [(ngModel)]="owner.name" placeholder="Enter your Name">
-              </div>
-              <div class="form-group">
-                <label for="ownerAddress">Address</label>
-                <input type="text" class="form-control" id="ownerAddress" name="ownerAddress" [(ngModel)]="owner.address" placeholder="Enter your Address">
-              </div>
-              <div class="form-group">
-                <label for="contactNumber">Contact Number</label>
-                <input type="tel" class="form-control" id="contactNumber" name="contactNumber" [(ngModel)]="owner.contactNumber" placeholder="Enter your Contact Number">
-              </div>
+          <h2>Your House Sharing Preference</h2>
+  
+          <!-- Owner Details -->
+          <div class="details_box">
+            <h4>Owner Details</h4><br>
+            <div *ngIf="ownerDetails">
+              <p><strong>Owner Name:</strong> {{ ownerDetails.name }}</p>
+              <p><strong>Phone Number:</strong> {{ ownerDetails.phoneNumber }}</p>
+              <p><strong>Address:</strong> {{ ownerDetails.address }}</p>
             </div>
-  
-            <button type="submit" class="btn btn-primary submit_button">Update Details</button>
-          </form>
-  
-          <hr>
-  
-          <button class="btn btn-danger" (click)="deleteOwnerAccount()">Delete Account</button>
+          </div>
         </div>
       </div>
     </div>
   </section>
+  
+  <!-- Fallback when details are loading -->
+  <div *ngIf="!ownerDetails">
+    <p>Loading owner details...</p>
+  </div>
   
