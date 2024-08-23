@@ -1,49 +1,91 @@
 import { Component, OnInit } from '@angular/core';
-import {  UserService } from '../services/user.service';
-import { HttpClientModule } from '@angular/common/http';
+import { ForumService } from '../services/forum.service'; // Adjust the path as needed
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @Component({
+  standalone: true,
   selector: 'app-renter-account',
-  standalone:true,
-  imports: [HttpClientModule, FormsModule],
   templateUrl: './renter-account.component.html',
   styleUrls: ['./renter-account.component.css'],
+  imports: [CommonModule, FormsModule, HttpClientModule]
   
 })
 export class RenterAccountComponent implements OnInit {
-  user: any = {};
-  preferences: any = {};
+  forumDetails: any;
+  forumId = '66c2e99e16f8383d08e90f37'; // Replace with the actual forum ID you want to fetch
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private forumService: ForumService) {}
 
   ngOnInit(): void {
-    const email = localStorage.getItem('userEmail'); // Assuming email is stored in local storage after login
-    if (email) {
-      this.http.get(`/api/renters/${email}`).subscribe((data: any) => {
-        this.user = data;
-        this.preferences = data; // Assuming preferences are part of the same data object
-      });
-    } else {
-      this.router.navigate(['/login']);
-    }
+    this.loadForumDetails();
   }
 
-  updateUserDetails(): void {
-    const email = localStorage.getItem('userEmail');
-    if (email) {
-      this.http.put(`/api/renters/${email}`, { ...this.user, ...this.preferences }).subscribe(
-        (data: any) => {
-          console.log('Details updated', data);
-        },
-        (error: any) => {
-          console.error('Update failed', error);
-        }
-      );
-    }
+  loadForumDetails(): void {
+    this.forumService.getForumDetails(this.forumId).subscribe(
+      data => {
+        this.forumDetails = data;
+        console.log('Forum details loaded:', this.forumDetails);
+      },
+      error => {
+        console.error('Error loading forum details:', error);
+      }
+    );
   }
 }
+
+
+// import { Component, OnInit } from '@angular/core';
+// import { ForumService } from '../services/forum.service'; // Adjust the path as needed
+// import { CommonModule } from '@angular/common';
+// import { FormsModule } from '@angular/forms';
+// import { HttpClientModule } from '@angular/common/http';
+
+// @Component({
+//   standalone: true,
+//   selector: 'app-renter-account',
+//   templateUrl: './renter-account.component.html',
+//   styleUrls: ['./renter-account.component.css'],
+//   imports: [CommonModule, FormsModule, HttpClientModule]
+// })
+// export class RenterAccountComponent implements OnInit {
+//   forumDetails: any;
+//   forumId!: string; // Use the definite assignment assertion
+
+//   constructor(private forumService: ForumService) {}
+
+//   ngOnInit(): void {
+//     this.forumId = this.getCurrentRenterForumId();
+//     if (this.forumId) {
+//       this.loadForumDetails();
+//     } else {
+//       console.error('Forum ID not found.');
+//     }
+//   }
+
+//   getCurrentRenterForumId(): string {
+//     console.log(localStorage.getItem('forumId'));
+//     console.log('hiii');
+
+//     // Example: Retrieve the forum ID from localStorage or a service
+//     return localStorage.getItem('forumId') || ''; // Adjust the key as needed
+//   }
+
+//   loadForumDetails(): void {
+//     this.forumService.getForumDetails(this.forumId).subscribe(
+//       data => {
+//         this.forumDetails = data;
+//         console.log('Forum details loaded:', this.forumDetails);
+//       },
+//       error => {
+//         console.error('Error loading forum details:', error);
+//       }
+//     );
+//   }
+// }
+
+
+
+
