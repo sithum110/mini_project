@@ -28,7 +28,7 @@ export class LoginComponent {
         const userRole = response.role;
 
         if(userRole === 'owner'){
-          this.router.navigate(['/owner']);
+          this.router.navigate(['/property']);
         } else if(userRole === 'renter'){
           this.router.navigate(['/renter-account']);
         }else {
