@@ -9,6 +9,7 @@ const contactRoutes = require('./routes/contact.routes');
 const renterRoutes = require('./routes/renter.routes');
 const ownerRoutes = require('./routes/owner.routes');
 const propertyRoutes = require('./routes/property.routes');
+const Recommendation = require('./routes/recommendation.routes');
 
 
 
@@ -31,6 +32,7 @@ app.use('/api', contactRoutes);
 app.use('/api', renterRoutes);
 app.use('/api', ownerRoutes);
 app.use('/api', propertyRoutes);
+app.use('/api', Recommendation);
 
 
 app.listen(PORT, () => {
