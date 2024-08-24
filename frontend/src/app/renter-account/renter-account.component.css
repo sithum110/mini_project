@@ -1,0 +1,104 @@
+/* General form styling */
+.container{
+    margin-top: 50px;
+     }
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Headings */
+  h2 {
+    text-align: center;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Fieldset styling */
+  fieldset {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Legend styling */
+  legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #555;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Label styling */
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Input styling */
+  input[type="text"],
+  input[type="email"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Button styling */
+  button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+  }
+  
+  button[type="button"] {
+    background-color: #007bff;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Submit button styling */
+  button[type="submit"] {
+    background-color: #17a2b8;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #138496;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    form {
+      padding: 15px;
+    }
+  
+    input[type="text"],
+    input[type="email"] {
+      width: calc(100% - 16px);
+    }
+  
+    button {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  

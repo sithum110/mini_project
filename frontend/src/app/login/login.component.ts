@@ -15,6 +15,7 @@ import { AuthService } from '../services/auth.service';
 export class LoginComponent {
   email: string = '';
   password: string = '';
+  
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -23,7 +24,16 @@ export class LoginComponent {
       response => {
         console.log('User logged in', response);
         alert('Login successful!');
-        this.router.navigate(['/home']);
+        
+        const userRole = response.role;
+
+        if(userRole === 'owner'){
+          this.router.navigate(['/property']);
+        } else if(userRole === 'renter'){
+          this.router.navigate(['/renter-account']);
+        }else {
+          this.router.navigate(['/home']);
+        }
       },
       error => {
         console.error('Error logging in', error);

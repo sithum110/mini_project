@@ -16,6 +16,10 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { RentersComponent} from './renters/renters.component';
 import { ForumComponent } from './forum/forum.component';
+import { RenterAccountComponent } from './renter-account/renter-account.component';
+import { OwnersComponent } from './owners/owners.component';
+
+
 
 
 export const routes: Routes = [
@@ -37,7 +41,13 @@ export const routes: Routes = [
 { path: '', redirectTo: '/login', pathMatch: 'full' },
 {path:'home' ,component:HomeComponent,title:'home apge' },
 {path:'renters' ,component:RentersComponent,title:'renters page' },
-{path:'forum' ,component:ForumComponent,title:'forum page' }
+{path:'forum' ,component:ForumComponent,title:'forum page' },
+{path:'renter-account' ,component:RenterAccountComponent,title:'renter-account page' }, 
+{path:'owners' ,component:OwnersComponent,title:'owners page' }, 
+
+
+
+
   
  
 ];
