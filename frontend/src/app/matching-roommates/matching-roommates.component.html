@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Matching Roommates</h1>
+  
+    <!-- Loading Spinner or Message -->
+    <div *ngIf="isLoading" class="loading">
+      <p>Loading matching roommates...</p>
+      <div class="spinner"></div>
+    </div>
+  
+    <!-- Roommate List -->
+    <div *ngIf="!isLoading && roommates.length > 0">
+      <div *ngFor="let roommate of roommates" class="roommate-card">
+        <h3>{{ roommate.name }}</h3>
+        <p><strong>Email:</strong> {{ roommate.email }}</p>
+        <p><strong>Gender:</strong> {{ roommate.gender }}</p>
+        <p><strong>Budget:</strong> ${{ roommate.budget }}</p>
+        <p><strong>Location:</strong> {{ roommate.location }}</p>
+        <hr>
+      </div>
+    </div>
+  
+    <!-- No Roommates Found -->
+    <div *ngIf="!isLoading && roommates.length === 0">
+      <p>No matching roommates found.</p>
+    </div>
+  </div>
+  
