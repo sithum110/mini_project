@@ -1,46 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RoommateService } from '../services/roommate.service';
 
 @Component({
-  standalone:true,
+  standalone: true,
   selector: 'app-matching-roommates',
   templateUrl: './matching-roommates.component.html',
   styleUrls: ['./matching-roommates.component.css'],
-  imports:[CommonModule]
+  imports: [CommonModule]
 })
 export class MatchingRoommatesComponent implements OnInit {
   roommates: any[] = [];
   isLoading = true;  // Loading state
+  error: string | null = null; // Error handling
 
-  constructor() { }
+  constructor(private roommateService: RoommateService) { }
 
   ngOnInit(): void {
-    // Simulate data fetching with a timeout
-    setTimeout(() => {
-      this.roommates = [
-        {
-          name: 'kalana ',
-          email: 'Kalana.doe@example.com',
-          gender: 'Male',
-          budget: 1000,
-          location: 'Galle'
-        },
-        {
-          name: 'sahan',
-          email: 'sahan@example.com',
-          gender: 'male',
-          budget: 1200,
-          location: 'Galle'
-        },
-        {
-          name: 'nalini',
-          email: 'nalini@example.com',
-          gender: 'Female',
-          budget: 900,
-          location: 'Galle'
-        }
-      ];
-      this.isLoading = false;  // Data is loaded
-    }, 2000);  // Simulate a 2-second load time
+    this.loadRoommates();
+  }
+
+  loadRoommates(): void {
+    this.roommateService.getMatchingRoommates().subscribe(
+      data => {
+        this.roommates = data;
+        this.isLoading = false;  // Data is loaded
+      },
+      error => {
+        console.error('Error fetching roommates:', error);
+        this.error = 'Error fetching roommates'; // Set error message
+        this.isLoading = false;  // Data loading is complete even in case of error
+      }
+    );
   }
 }
+
