@@ -15,6 +15,7 @@ import { AuthService } from '../services/auth.service';
 export class LoginComponent {
   email: string = '';
   password: string = '';
+  
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -29,7 +30,7 @@ export class LoginComponent {
         if(userRole === 'owner'){
           this.router.navigate(['/owner']);
         } else if(userRole === 'renter'){
-          this.router.navigate(['/renter']);
+          this.router.navigate(['/renter-account']);
         }else {
           this.router.navigate(['/home']);
         }

@@ -1,3 +1,6 @@
+
+
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -32,4 +35,33 @@ export class AuthService {
   isLoggedIn(): boolean {
     return this.getToken() !== null;
   }
+
+  getRenterDetails(email: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/renter/${email}`);
+  }
+
+  getUser(): string | null {
+    return localStorage.getItem('user');
+  }
 }
+
+
+
+
+// import { Injectable } from '@angular/core';
+// import { HttpClient } from '@angular/common/http';
+// import { Observable } from 'rxjs';
+
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class AuthService {
+
+//   private baseUrl = 'http://localhost:3000/api/renter';
+
+//   constructor(private http: HttpClient) { }
+
+//   getRenterDetails(email: string): Observable<any> {
+//     return this.http.get(`${this.baseUrl}/renter/${email}`);
+//   }
+// }

@@ -15,11 +15,15 @@ import { PropertyComponent } from './property/property.component';
 import { SignupComponent } from './signup/signup.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { RentersComponent} from './renters/renters.component';
+import { ForumComponent } from './forum/forum.component';
+import { RenterAccountComponent } from './renter-account/renter-account.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,RouterLink, RouterLinkActive,HomeComponent,AboutComponent,BlogComponent,AgencyComponent,AgentComponent,BlogDetailComponent,ContactComponent,DetailComponent,ListComponent,LoginComponent,PropertyComponent,SignupComponent,RouterModule,NavbarComponent,FooterComponent],
+  imports: [RouterOutlet,RouterLink, RouterLinkActive,HomeComponent,AboutComponent,BlogComponent,AgencyComponent,AgentComponent,BlogDetailComponent,ContactComponent,DetailComponent,ListComponent,LoginComponent,PropertyComponent,SignupComponent,RouterModule,NavbarComponent,FooterComponent,RentersComponent,ForumComponent,RenterAccountComponent,HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
