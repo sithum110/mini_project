@@ -4,7 +4,6 @@ const User = require('../models/user.model');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-
 router.post('/signup', async (req, res) => {
   const { username, email, password,role } = req.body;
 
