@@ -39,6 +39,10 @@ export class AuthService {
   getRenterDetails(email: string): Observable<any> {
     return this.http.get(`${this.apiUrl}/renter/${email}`);
   }
+
+  getUser(): string | null {
+    return localStorage.getItem('user');
+  }
 }
 
 

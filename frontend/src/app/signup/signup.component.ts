@@ -12,23 +12,34 @@ import { Router } from '@angular/router';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
+
+  // Add other fields as necessary
+
 export class SignupComponent {
   username: string = '';
   email: string = '';
   password: string = '';
   role: string = '';
+
+
   
 
   constructor(private http: HttpClient,private router: Router) {}
 
   onSubmit() {
     const user = { username: this.username, email: this.email, password: this.password, role: this.role };
+    
     this.http.post('http://localhost:3000/api/signup', user)
-      .subscribe(response => {
+      .subscribe((response:any) => {
+        localStorage.setItem('user', (response['user']));
+        localStorage.setItem('token', (response['token']));
+        
         console.log('User signed up', response);
         if (this.role === 'renter') {
           // If the user is a renter, redirect them to the preferences form
-          this.router.navigate(['/forum']);
+          console.log('User is a renter',response);
+
+          this.router.navigate(['/forum'], { state: { user: response['user'] } });
         } else {
           // Otherwise, redirect to login
           this.router.navigate(['/login']);

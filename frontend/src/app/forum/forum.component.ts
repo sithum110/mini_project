@@ -69,15 +69,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+import { HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-forum',
   standalone: true,
-  imports: [HttpClientModule, FormsModule],
+  imports: [HttpClientModule, FormsModule,],
   templateUrl: './forum.component.html',
   styleUrls: ['./forum.component.css']
 })
 export class ForumComponent {
+  userid: any = '';
   name: string = '';
   email: string = ''; // Ensure this is set correctly
   gender: string = '';
@@ -95,10 +99,22 @@ export class ForumComponent {
   petsInHouse: string = '';
   birthDay: any;
 
-  constructor(private http: HttpClient, private router: Router) {}
+
+constructor(private http: HttpClient, private router: Router,private route: ActivatedRoute,private auth:AuthService) {}
+
+
+  ngOnInit(): void {
+    
+    const rser = this.auth.getUser();
+    console.log('User:', rser);
+    this.userid = rser;
+    }
+  
+  
 
   onSubmit() {
     const questionnaireData = {
+    userid: this.userid,
       name: this.name,
       email: this.email, // Include email in the data
       gender: this.gender,
@@ -115,8 +131,14 @@ export class ForumComponent {
       dietaryRestrictions: this.dietaryRestrictions,
       petsInHouse: this.petsInHouse
     };
+    const ttoken = this.auth.getToken(); 
+    const headers = new HttpHeaders({
+      
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer ' + ttoken, // Replace with your actual token or other headers
+    });
 
-    this.http.post('http://localhost:3000/api/forum', questionnaireData)
+    this.http.post('http://localhost:3000/api/forum', questionnaireData, { headers })
       .subscribe(response => {
         console.log('Questionnaire submitted', response);
         alert('Questionnaire submitted successfully!');

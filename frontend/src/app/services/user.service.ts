@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class UserService {
   private apiUrl = 'http://localhost:3000/userapi'; // Adjust with your actual API URL
 
