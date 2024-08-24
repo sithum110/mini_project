@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 
 const QuestionnaireSchema = new mongoose.Schema({
+
+  userid: String,
   name: String,
   email: String,
   gender: String,
