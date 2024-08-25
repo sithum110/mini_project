@@ -104,10 +104,10 @@ constructor(private http: HttpClient, private router: Router,private route: Acti
 
 
   ngOnInit(): void {
-    
+    const user=localStorage.getItem('user');
     const rser = this.auth.getUser();
     console.log('User:', rser);
-    this.userid = rser;
+    this.userid = user;
     }
   
   

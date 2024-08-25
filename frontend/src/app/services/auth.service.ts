@@ -5,6 +5,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import * as jwt_decode from 'jwt-decode';
+
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +20,11 @@ export class AuthService {
     return this.http.post<any>(this.apiUrl, { email, password }).pipe(
       tap(response => {
         if (response.token) {
-          localStorage.setItem('token', response.token);
+          // localStorage.setItem('user', (response['user']));
+        localStorage.setItem('token', (response['token']));
+        localStorage.setItem('user', (response['user']));
+          
+          console.log(response.token.email)
         }
       })
     );
@@ -40,8 +46,22 @@ export class AuthService {
     return this.http.get(`${this.apiUrl}/renter/${email}`);
   }
 
-  getUser(): string | null {
-    return localStorage.getItem('user');
+  // getUser(): string | null {
+  //   return localStorage.getItem('user');
+  // }
+
+  getUser(): any {
+    // const token = this.getToken();
+    // return token ? this.decodeToken(token) : null;
+  }
+
+  private decodeToken(token: string): any {
+    try {
+      // return jwt_decode(token);
+    } catch (Error) {
+      console.error('Error decoding token:', Error);
+      return null;
+    }
   }
 }
 
