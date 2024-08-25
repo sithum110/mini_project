@@ -26,9 +26,12 @@ export class LoginComponent {
         alert('Login successful!');
         
         const userRole = response.role;
+        const userEmail = response.user;
+        console.log(userEmail);
+        
 
         if(userRole === 'owner'){
-          this.router.navigate(['/owner']);
+          this.router.navigate(['/property']);
         } else if(userRole === 'renter'){
           this.router.navigate(['/renter-account']);
         }else {

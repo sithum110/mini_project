@@ -42,7 +42,7 @@ export class SignupComponent {
           this.router.navigate(['/forum'], { state: { user: response['user'] } });
         } else {
           // Otherwise, redirect to login
-          this.router.navigate(['/login']);
+          this.router.navigate(['/owner-forum']);
         }
       }, error => {
         console.error('Error signing up', error);

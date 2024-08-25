@@ -18,7 +18,7 @@ router.get('/forum/:id',authenticateJWT,  async (req, res) => {
 
   try {
       const forumId = req.params.id;
-      const forum = await Questionnaire.findOne({ userid: req.userId }); // Use `Questionnaire` instead of `Forum`
+      const forum = await Questionnaire.findOne({ userid: forumId }); // Use `Questionnaire` instead of `Forum`
       if (!forum) {
           return res.status(404).json({ message: 'Forum not found' });
       }

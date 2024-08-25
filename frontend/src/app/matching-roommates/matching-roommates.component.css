@@ -1,0 +1,112 @@
+/* Container */
+.container {
+    margin-top: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: #03a9f414;
+  }
+  
+  .container h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Loading Spinner */
+  .loading-container {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .loading-spinner {
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading-container p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  /* Roommate List */
+  .roommate-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .roommate-card h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .roommate-card p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* No Roommates Found */
+  .container p {
+    font-size: 18px;
+    color: #888;
+    text-align: left;
+  }
+
+  .send-message-button {
+    background-color: #1ABC9C;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .send-message-button:hover {
+    background-color: #16a085;
+  }
+
+
+  .back-button-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .back-to-account-button {
+    background-color: #3498db;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .back-to-account-button:hover {
+    background-color: #2980b9;
+  }
+  
+  
+  
+  
