@@ -32,7 +32,6 @@ app.use('/api', renterRoutes);
 app.use('/api', ownerRoutes);
 app.use('/api', propertyRoutes);
 
-
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
