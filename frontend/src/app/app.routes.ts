@@ -18,6 +18,8 @@ import { RentersComponent} from './renters/renters.component';
 import { ForumComponent } from './forum/forum.component';
 import { RenterAccountComponent } from './renter-account/renter-account.component';
 import { OwnersComponent } from './owners/owners.component';
+import { MatchingRoommatesComponent } from './matching-roommates/matching-roommates.component';
+import { Component } from '@angular/core';
 
 
 
@@ -44,6 +46,7 @@ export const routes: Routes = [
 {path:'forum' ,component:ForumComponent,title:'forum page' },
 {path:'renter-account' ,component:RenterAccountComponent,title:'renter-account page' }, 
 {path:'owners' ,component:OwnersComponent,title:'owners page' }, 
+{path:'matching-roommates',component:MatchingRoommatesComponent}
 
 
 

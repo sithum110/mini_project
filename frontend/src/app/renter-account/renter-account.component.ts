@@ -1,76 +1,36 @@
-import { Component, OnInit } from '@angular/core';
-import { ForumService } from '../services/forum.service'; // Adjust the path as needed
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-
-
-@Component({
-  standalone: true,
-  selector: 'app-renter-account',
-  templateUrl: './renter-account.component.html',
-  styleUrls: ['./renter-account.component.css'],
-  imports: [CommonModule, FormsModule, HttpClientModule]
-  
-})
-export class RenterAccountComponent implements OnInit {
-  forumDetails: any;
-  forumId = '66c2e99e16f8383d08e90f37'; // Replace with the actual forum ID you want to fetch
-
-  constructor(private forumService: ForumService) {}
-
-  ngOnInit(): void {
-    this.loadForumDetails();
-  }
-
-  loadForumDetails(): void {
-    this.forumService.getForumDetails(this.forumId).subscribe(
-      data => {
-        this.forumDetails = data;
-        console.log('Forum details loaded:', this.forumDetails);
-      },
-      error => {
-        console.error('Error loading forum details:', error);
-      }
-    );
-  }
-}
-
-
 // import { Component, OnInit } from '@angular/core';
 // import { ForumService } from '../services/forum.service'; // Adjust the path as needed
 // import { CommonModule } from '@angular/common';
 // import { FormsModule } from '@angular/forms';
 // import { HttpClientModule } from '@angular/common/http';
+// import { RoommateService } from '../services/roommate.service';
+// import { RouterLink,RouterLinkActive } from '@angular/router';
+// // import { Router } from '@angular/router';
+
+
 
 // @Component({
 //   standalone: true,
 //   selector: 'app-renter-account',
 //   templateUrl: './renter-account.component.html',
 //   styleUrls: ['./renter-account.component.css'],
-//   imports: [CommonModule, FormsModule, HttpClientModule]
+//   imports: [CommonModule, FormsModule, HttpClientModule, RouterLink,RouterLinkActive ]
+  
 // })
 // export class RenterAccountComponent implements OnInit {
 //   forumDetails: any;
-//   forumId!: string; // Use the definite assignment assertion
+//   forumId = '66c2e99e16f8383d08e90f37'; // Replace with the actual forum ID you want to fetch
+ 
 
-//   constructor(private forumService: ForumService) {}
+//   constructor(private forumService: ForumService, private roommatservice:RoommateService) {}
 
 //   ngOnInit(): void {
-//     this.forumId = this.getCurrentRenterForumId();
-//     if (this.forumId) {
-//       this.loadForumDetails();
-//     } else {
-//       console.error('Forum ID not found.');
-//     }
+//     this.loadForumDetails();
 //   }
-
-//   getCurrentRenterForumId(): string {
-//     console.log(localStorage.getItem('forumId'));
-//     console.log('hiii');
-
-//     // Example: Retrieve the forum ID from localStorage or a service
-//     return localStorage.getItem('forumId') || ''; // Adjust the key as needed
+//   logout(): void {
+//     console.log('logout')
+//     localStorage.removeItem('token');
+//     // this.router.navigate(['/home']);
 //   }
 
 //   loadForumDetails(): void {
@@ -84,7 +44,79 @@ export class RenterAccountComponent implements OnInit {
 //       }
 //     );
 //   }
+
+  
+  
 // }
+
+
+
+import { Component, OnInit } from '@angular/core';
+import { ForumService } from '../services/forum.service'; // Adjust the path as needed
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { RoommateService } from '../services/roommate.service';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+
+@Component({
+  standalone: true,
+  selector: 'app-renter-account',
+  templateUrl: './renter-account.component.html',
+  styleUrls: ['./renter-account.component.css'],
+  imports: [CommonModule, FormsModule, HttpClientModule, RouterLink, RouterLinkActive]
+})
+export class RenterAccountComponent implements OnInit {
+  forumDetails: any;
+  forumId = '66c9add1462f02c1078b5515'; // Replace with the actual forum ID you want to fetch
+
+  constructor(private forumService: ForumService, private roommatservice: RoommateService, private router: Router) {}
+
+  ngOnInit(): void {
+    
+    this.loadForumDetails();
+   
+  }
+
+  logout(): void {
+    console.log('logout');
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    this.router.navigate(['/login']); // Navigate to the login page
+  }
+
+  loadForumDetails(): void {
+    console.log(this.forumId)
+    const user=localStorage.getItem('user');
+    console.log('user',user); 
+    if(user){
+      console.log('user',user);
+      this.forumService.getForumDetails(user).subscribe(
+        data => {
+          this.forumDetails = data;
+          console.log('Forum details loaded:', this.forumDetails);
+        },
+        error => {
+          console.error('Error loading forum details:', error);
+        }
+      );
+    }
+    else{
+      console.log('user not found');
+    }
+   
+  }
+
+  getUser()  {
+    const user=localStorage.getItem('user');
+    console.log(user)
+  }
+ 
+}
+
+
+
+
 
 
 

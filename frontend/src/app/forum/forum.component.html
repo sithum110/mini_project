@@ -38,6 +38,7 @@
                   <label><input type="radio" name="gender" [(ngModel)]="gender" value="Other">Other</label>
                 </div>
               </div>
+
               <div class="form-group">
                 <label for="birthDay">Birth Day</label>
                 <input type="date" class="form-control" id="birthDay" name="birthDay" [(ngModel)]="birthDay" placeholder="Enter your birthday">
@@ -55,9 +56,9 @@
               </div>
               <div class="form-group">
                 <label>Type of co-living space: </label><br>
-                <input type="checkbox" id="apartment" name="apartment" [(ngModel)]="apartment" value="true">&nbsp;
+                <input type="radio" id="apartment" name="apartment" [(ngModel)]="apartment" value="true">&nbsp;
                 <label for="apartment">Apartment</label><br>
-                <input type="checkbox" id="house" name="house" [(ngModel)]="house" value="true">&nbsp;
+                <input type="radio" id="house" name="house" [(ngModel)]="house" value="true">&nbsp;
                 <label for="house">House</label><br>
               </div>
               <div class="form-group">
