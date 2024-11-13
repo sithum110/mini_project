@@ -3,6 +3,7 @@ import { ForumService } from '../services/forum.service'; // Adjust the path as 
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from '../services/auth.service';
 
 
 @Component({
@@ -15,12 +16,18 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class RenterAccountComponent implements OnInit {
   forumDetails: any;
-  forumId = '66c2e99e16f8383d08e90f37'; // Replace with the actual forum ID you want to fetch
+  forumId = '66c9a8fe462f02c1078b550b'; // Replace with the actual forum ID you want to fetch
 
   constructor(private forumService: ForumService) {}
 
   ngOnInit(): void {
     this.loadForumDetails();
+  }
+
+  logout() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('forumId');
+     
   }
 
   loadForumDetails(): void {
@@ -35,6 +42,9 @@ export class RenterAccountComponent implements OnInit {
     );
   }
 }
+
+
+
 
 
 // import { Component, OnInit } from '@angular/core';

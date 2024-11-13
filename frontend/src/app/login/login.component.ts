@@ -23,6 +23,7 @@ export class LoginComponent {
     this.authService.login(this.email, this.password).subscribe(
       response => {
         console.log('User logged in', response);
+        console.log('User email', response.email);
         alert('Login successful!');
         
         const userRole = response.role;
