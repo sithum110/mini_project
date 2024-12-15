@@ -5,7 +5,7 @@
        <div class="center_about_1 text-center clearfix">
         <div class="col-sm-12">
          <h1 class="mgt">Contact Us</h1>
-         <p>Lists of our all Popular agencies</p>
+         <p>We’re Here to Support—Contact Us Anytime!</p>
         </div>
        </div>
       </div>
@@ -18,46 +18,53 @@
        <div class="contact_1 clearfix">
         <div class="col-sm-7">
          <div class="contact_1l clearfix">
-            <div class="blog_detail_l3 clearfix">
-             <h3 class="mgt">Post Comment</h3>
-             <div class="blog_detail_l3i clearfix">
-              <div class="col-sm-6 space_left">
-               <input class="form-control" placeholder="Full Name" type="text">
-              </div>
-              <div class="col-sm-6 space_right">
-               <input class="form-control" placeholder="Enter Email" type="text">
-              </div>
-             </div>
-             <div class="blog_detail_l3i clearfix">
-              <div class="col-sm-6 space_left">
-               <input class="form-control" placeholder="Subject" type="text">
-              </div>
-              <div class="col-sm-6 space_right">
-               <input class="form-control" placeholder="Phone Number" type="text">
-              </div>
-             </div>
-             <div class="blog_detail_l3i clearfix">
-              <div class="col-sm-12 space_all">
-               <textarea placeholder="Comments" class="form-control form_1"></textarea>
-               <h5 class="text-center"><a class="button_1 block" href="#">Submit Review</a></h5>
-              </div>
-             </div>
-          </div>
+            <form (ngSubmit)="onSubmit()" #questionnaireForm="ngForm">
+               <div class="blog_detail_l3 clearfix"  >
+                  <h3 class="mgt">Post Comment</h3>
+                  <div class="blog_detail_l3i clearfix">
+                   <div class="col-sm-6 space_left"  >
+                    <input  class="form-control" placeholder="Full Name" type="text" id="name" name="name" [(ngModel)]="name">
+                   </div>
+                   <div class="col-sm-6 space_right" >
+                    <input class="form-control" placeholder="Enter Email" type="text" id="email" name="email" [(ngModel)]="email">
+                   </div>
+                  </div>
+                  <div class="blog_detail_l3i clearfix" >
+                   <div class="col-sm-6 space_left">
+                    <input class="form-control" placeholder="Subject" type="text" id="subject" name="subject" [(ngModel)]="subject">
+                   </div>
+                   <div class="col-sm-6 space_right" >
+                    <input class="form-control" placeholder="Phone Number" type="text" id="number" name="number" [(ngModel)]="number">
+                   </div>
+                  </div>
+                  <div class="blog_detail_l3i clearfix" >
+                   <div class="col-sm-12 space_all">
+                    <textarea placeholder="Comments" class="form-control form_1" type="text" id="message" name="message" [(ngModel)]="message"></textarea>
+                   
+                    <button class="btn btn-lg btn-block blue-bg"  type="submit">Submit</button>
+                   </div>
+                  </div>
+               </div>
+            </form>
          </div>
         </div>
         <div class="col-sm-5">
          <div class="contact_1r clearfix">
           <h3 class="mgt">Get In Touch</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+          <p>We’re here to help and eager to hear from you. Whether you have questions, need support, or want to discuss a potential project, our team is ready to assist you. Please reach out using the contact information below or fill out the form, and we’ll get back to you as soon as possible. Your inquiries are important to us, and we look forward to connecting with you.</p>
+
+         
+
           <div class="mission_1ri clearfix">
            <div class="col-sm-1 space_all">
             <span><i class="fa fa-building col_1"></i></span>
            </div>
            <div class="col-sm-11">
             <h4 class="mgt">Reach Us</h4>
-            <p class="col_2">1417, Eget Market,<br>
-    Lorem Road, Semper 50 DB,<br>
-    India, VTB</p>
+            <p class="col_2">1417, Pabahinna,<br>
+    Ibulpe, Balangoda,<br>
+    Rathnapura,Sri Lanka</p>
            </div>
           </div>
           <div class="mission_1ri clearfix">
@@ -66,7 +73,7 @@
            </div>
            <div class="col-sm-11">
             <h4 class="mgt">Drop A Mail</h4>
-            <p class="col_2">info$gmail.com <br>info$gmail.com</p>
+            <p class="col_2">coLivegmail.com <br>info$gmail.com</p>
            </div>
           </div>
           <div class="mission_1ri clearfix">
@@ -75,7 +82,7 @@
            </div>
            <div class="col-sm-11">
             <h4 class="mgt">Call Us</h4>
-            <p class="col_2">1234567890 <br>1234567890</p>
+            <p class="col_2">0412245656 <br>1234567890</p>
            </div>
           </div>
          </div>

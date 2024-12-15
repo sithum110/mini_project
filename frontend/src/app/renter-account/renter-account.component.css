@@ -1,0 +1,118 @@
+/* Center Section */
+.center_about {
+  margin-top: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: #03a9f414;
+}
+
+.center_about h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.center_about p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Questionnaire Section */
+#questionnaire {
+  padding: 50px 0;
+  background: #fafafa;
+}
+
+#questionnaire h2 {
+  font-size: 28px;
+  color: #444;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.details_box {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.details_box h4 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.details_box p {
+  font-size: 16px;
+  color: #555;
+}
+
+.details_box ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.details_box li {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Roommate Finder Section */
+#roommate-finder {
+  padding: 30px 0;
+  background: #f0f0f0;
+  text-align: center;
+}
+
+#roommate-finder a {
+  font-size: 18px;
+  color: #1ABC9C;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid #1ABC9C;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+#roommate-finder a:hover {
+  background: #1ABC9C;
+  color: #fff;
+}
+
+.button-1 {
+  font-size: 18px;
+  color: #fff;
+  background: #e74c3c;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.button-1:hover {
+  background: #c0392b;
+}
+
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    form {
+      padding: 15px;
+    }
+  
+    input[type="text"],
+    input[type="email"] {
+      width: calc(100% - 16px);
+    }
+  
+    button {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  

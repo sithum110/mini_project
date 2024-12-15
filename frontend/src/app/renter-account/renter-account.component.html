@@ -1,0 +1,92 @@
+<section id="center" class="clearfix center_about">
+  <div class="container clearfix">
+    <div class="row">
+      <div class="center_about_1 text-center clearfix">
+        <div class="col-sm-12">
+          <h1 class="mgt">Welcome  {{ forumDetails.name }}</h1>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="questionnaire">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h2>Your House Sharing Preference</h2>
+
+        <!-- Personal Details -->
+        <div class="details_box">
+          <h4>Personal Details</h4><br>
+          <div *ngIf="forumDetails">
+            <p><strong>Name:</strong> {{ forumDetails.name }}</p>
+            <p><strong>Email:</strong> {{ forumDetails.email }}</p>
+            <p><strong>Gender:</strong> {{ forumDetails.gender }}</p>
+            <p><strong>Birth Day:</strong> {{ forumDetails.birthDay | date:'mediumDate' }}</p>
+            <p><strong>Monthly Budget:</strong> ${{ forumDetails.budget }}</p>
+          </div>
+        </div>
+
+        <!-- Living Preferences -->
+        <div class="details_box">
+          <h4>Living Preferences</h4><br>
+          <div *ngIf="forumDetails">
+            <p><strong>Preferred Location:</strong> {{ forumDetails.location }}</p>
+            <p><strong>Type of co-living space:</strong></p>
+            <ul>
+              <li *ngIf="forumDetails.coLivingType.includes('Apartment')">Apartment</li>
+              <li *ngIf="forumDetails.coLivingType.includes('House')">House</li>
+            </ul>
+            <p><strong>Preferred Amenities:</strong> {{ forumDetails.amenities }}</p>
+            <p><strong>Preferred Lifestyle:</strong> {{ forumDetails.lifestyle }}</p>
+          </div>
+        </div>
+
+        <!-- Roommate Preferences -->
+        <div class="details_box">
+          <h4>Roommate Preferences</h4><br>
+          <div *ngIf="forumDetails">
+            <p><strong>Roommate Preferences:</strong> {{ forumDetails.roommatePreferences }}</p>
+          </div>
+        </div>
+
+        <!-- Lifestyle and Interests -->
+        <div class="details_box">
+          <h4>Lifestyle and Interests</h4><br>
+          <div *ngIf="forumDetails">
+            <p><strong>Do you prefer a quiet environment?</strong> {{ forumDetails.quietEnvironment }}</p>
+            <p><strong>Do you prefer social gatherings and events?</strong> {{ forumDetails.socialGatherings }}</p>
+            <p><strong>Do you have any dietary restrictions?</strong> {{ forumDetails.dietaryRestrictions }}</p>
+            <p><strong>Are you comfortable with pets in the house?</strong> {{ forumDetails.petsInHouse }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <div *ngIf="!forumDetails">
+  <p>Loading forum details...</p>
+</div> -->
+
+
+<section id="roommate-finder">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        
+        <a routerLink="/matching-roommates" routerLinkActive="active" >Find a Roommate</a>
+        <!-- onclick logout -->
+         <button class="button-1" (click)="logout()">logout</button>
+         <!-- <button class="button-1" (click)="getUser()">get user</button> -->
+       
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div></div>
+
