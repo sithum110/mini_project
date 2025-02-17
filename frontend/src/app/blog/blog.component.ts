@@ -10,5 +10,5 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
   styleUrl: './blog.component.css'
 })
 export class BlogComponent {
-
+//test
 }
